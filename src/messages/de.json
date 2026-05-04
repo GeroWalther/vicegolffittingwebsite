@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Start",
+    "fitting": "Fitting",
+    "demoDays": "Demo Days",
+    "products": "Produkte",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "book": "Termin buchen",
+    "menu": "Menü"
+  },
+  "hero": {
+    "eyebrow": "Offizieller Vice Golf Fitter — Mallorca",
+    "title": "Stell deine Waffen scharf.",
+    "subtitle": "Persönliches Vice Golf Clubfitting in Son Gual. Eine Stunde. Echte Daten. Besseres Golf.",
+    "cta": "Fitting buchen",
+    "secondary": "Demo Days ansehen"
+  },
+  "stats": {
+    "experience": "Jahre Erfahrung",
+    "clubs": "Schläger gebaut",
+    "players": "Spieler gefittet",
+    "rating": "Ø Bewertung"
+  },
+  "fittingSection": {
+    "eyebrow": "Privates Fitting",
+    "title": "60 Minuten. Auf deinen Schwung gebaut.",
+    "body": "Komm mit Fragen, geh mit dem richtigen Schaft, Kopf und Lie-Winkel. Wir arbeiten mit Launchmonitor-Daten, deinem echten Ballflug und der kompletten Vice-Matrix, damit deine Schläger zu deinem Tempo passen — nicht zu jemand anders.",
+    "priceLabel": "Pro Session",
+    "priceUnit": "/ Stunde",
+    "includes": [
+      "Launchmonitor-Session in Son Gual",
+      "Komplettes Bag-Fitting oder einzelner Schläger",
+      "Vice Köpfe, Schäfte & Griffe abgestimmt",
+      "Build-Sheet per E-Mail"
+    ],
+    "cta": "Slot reservieren"
+  },
+  "demoSection": {
+    "eyebrow": "Demo Days",
+    "title": "Probiere die ganze Vice-Linie. Auf uns.",
+    "body": "Öffentliche Demo Days auf Mallorca. Keine Anmeldung, keine Kosten — komm vorbei und schlag die Schläger.",
+    "empty": "Aktuell keine Demo Days geplant. Schau bald wieder rein oder melde dich für eine private Session.",
+    "cta": "Alle Demo Days",
+    "rsvp": "Termin merken"
+  },
+  "aboutSection": {
+    "eyebrow": "Über Gero",
+    "title": "Fittings, die dein Spiel respektieren.",
+    "body": "Ich bin Gero — Golfer, Fitter und der einzige zertifizierte Vice Fitter auf Mallorca. Ich habe diesen Service für Spieler aufgebaut, die nicht mehr raten wollen, sondern bereit sind, jeden Schlag mit dem richtigen Schläger zu spielen."
+  },
+  "productsSection": {
+    "eyebrow": "Vice Equipment",
+    "title": "Der komplette Vice-Katalog.",
+    "body": "Driver, Hölzer, Eisen, Wedges, Putter, Bälle und Apparel — gefittet und bestellt über mich als deinen lokalen Mallorca-Händler.",
+    "cta": "Zur Produktlinie"
+  },
+  "contactSection": {
+    "eyebrow": "Kontakt",
+    "title": "Fragen? Sprich mich direkt an.",
+    "whatsapp": "WhatsApp",
+    "email": "E-Mail",
+    "whatsappNote": "Schnellste Antwort",
+    "emailNote": "Für längere Anfragen"
+  },
+  "book": {
+    "title": "Dein Fitting buchen",
+    "subtitle": "60 Minuten in Son Gual — 90 €. Sichere Kartenzahlung, sofortige Kalendereinladung.",
+    "fields": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon (optional)",
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "notes": "Hinweise an Gero (optional)",
+      "notesPlaceholder": "Handicap, Fokus deiner Session, etc."
+    },
+    "summary": "Zusammenfassung",
+    "session": "Vice Fitting · 60 Min · Son Gual",
+    "total": "Gesamt",
+    "submit": "Weiter zur Zahlung",
+    "submitting": "Weiterleiten…",
+    "selectDate": "Datum wählen",
+    "noSlots": "Keine Slots an diesem Tag verfügbar",
+    "errors": {
+      "required": "Pflichtfeld",
+      "email": "Bitte eine gültige E-Mail angeben",
+      "slotTaken": "Dieser Slot wurde gerade gebucht. Bitte wähle einen anderen.",
+      "generic": "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+    }
+  },
+  "success": {
+    "title": "Gebucht.",
+    "body": "Dein Fitting ist bestätigt. Schau in dein Postfach für die Kalendereinladung und Details. Bis bald in Son Gual.",
+    "cta": "Zurück zur Startseite"
+  },
+  "cancel": {
+    "title": "Zahlung abgebrochen",
+    "body": "Kein Problem. Dein Slot wurde nicht reserviert — versuch es gern erneut oder schreib mir auf WhatsApp.",
+    "cta": "Erneut versuchen"
+  },
+  "footer": {
+    "tagline": "Offizieller Vice Golf Händler & Fitter auf Mallorca.",
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "common": {
+    "from": "ab",
+    "perHour": "pro Stunde",
+    "loading": "Laden…"
+  }
+}

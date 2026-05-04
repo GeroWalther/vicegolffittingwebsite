@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Home",
+    "fitting": "Fitting",
+    "demoDays": "Demo Days",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Book Now",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Official Vice Golf Fitter — Mallorca",
+    "title": "Dial in your weapons.",
+    "subtitle": "Personal Vice Golf club fittings at Son Gual. One hour. Real data. Better golf.",
+    "cta": "Book a Fitting",
+    "secondary": "View Demo Days"
+  },
+  "stats": {
+    "experience": "Years on tour bags",
+    "clubs": "Clubs fit & built",
+    "players": "Players dialed in",
+    "rating": "Average review"
+  },
+  "fittingSection": {
+    "eyebrow": "Private Fitting",
+    "title": "60 minutes. Built around your swing.",
+    "body": "Walk in with questions, walk out with the right shaft, head, and lie angle. We use launch monitor data, your real ball flight, and Vice's complete head & shaft matrix to build clubs that fit your tempo, not someone else's.",
+    "priceLabel": "Per session",
+    "priceUnit": "/ hour",
+    "includes": [
+      "Launch monitor session at Son Gual",
+      "Full bag analysis or single-club focus",
+      "Vice head, shaft & grip matching",
+      "Build sheet emailed to you"
+    ],
+    "cta": "Reserve your slot"
+  },
+  "demoSection": {
+    "eyebrow": "Demo Days",
+    "title": "Try the full Vice line. On us.",
+    "body": "Public demo days across Mallorca. No appointment, no fee — just show up and hit clubs.",
+    "empty": "No demo days scheduled. Check back soon, or reach out for a private session.",
+    "cta": "See all demo days",
+    "rsvp": "Save the date"
+  },
+  "aboutSection": {
+    "eyebrow": "About Gero",
+    "title": "Fittings that respect your game.",
+    "body": "I'm Gero — golfer, fitter, and the only certified Vice fitter on Mallorca. I built this service for players who are tired of guessing and ready to hit the right club, every time."
+  },
+  "productsSection": {
+    "eyebrow": "Vice Equipment",
+    "title": "The full Vice catalog.",
+    "body": "Drivers, woods, irons, wedges, putters, balls, and apparel — fit and ordered through me as your local Mallorca dealer.",
+    "cta": "Browse the line"
+  },
+  "contactSection": {
+    "eyebrow": "Get in touch",
+    "title": "Questions? Talk to me directly.",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "whatsappNote": "Fastest reply",
+    "emailNote": "For longer questions"
+  },
+  "book": {
+    "title": "Book your fitting",
+    "subtitle": "60 minutes at Son Gual — €90. Pay securely with card, get an instant calendar invite.",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "date": "Date",
+      "time": "Time",
+      "notes": "Notes for Gero (optional)",
+      "notesPlaceholder": "Handicap, what you'd like to focus on, etc."
+    },
+    "summary": "Summary",
+    "session": "Vice fitting · 60 min · Son Gual",
+    "total": "Total",
+    "submit": "Continue to payment",
+    "submitting": "Redirecting…",
+    "selectDate": "Select a date",
+    "noSlots": "No slots left on this day",
+    "errors": {
+      "required": "This field is required",
+      "email": "Please enter a valid email",
+      "slotTaken": "Sorry, that slot was just taken. Please pick another.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "success": {
+    "title": "You're booked.",
+    "body": "Your fitting is confirmed. Check your email for the calendar invite and details. See you at Son Gual.",
+    "cta": "Back to home"
+  },
+  "cancel": {
+    "title": "Payment cancelled",
+    "body": "No problem. Your slot wasn't reserved — feel free to try again or reach out on WhatsApp.",
+    "cta": "Try again"
+  },
+  "footer": {
+    "tagline": "Official Vice Golf retailer & fitter on Mallorca.",
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "common": {
+    "from": "from",
+    "perHour": "per hour",
+    "loading": "Loading…"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "fitting": "Fitting",
+    "demoDays": "Demo Days",
+    "products": "Productos",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "book": "Reservar",
+    "menu": "Menú"
+  },
+  "hero": {
+    "eyebrow": "Fitter Oficial de Vice Golf — Mallorca",
+    "title": "Afina tus armas.",
+    "subtitle": "Fitting personal de palos Vice Golf en Son Gual. Una hora. Datos reales. Mejor golf.",
+    "cta": "Reservar fitting",
+    "secondary": "Ver Demo Days"
+  },
+  "stats": {
+    "experience": "Años de experiencia",
+    "clubs": "Palos construidos",
+    "players": "Jugadores ajustados",
+    "rating": "Valoración media"
+  },
+  "fittingSection": {
+    "eyebrow": "Fitting Privado",
+    "title": "60 minutos. Construido para tu swing.",
+    "body": "Llega con dudas, sal con el shaft, la cabeza y el lie correctos. Usamos datos de launch monitor, tu vuelo real y la matriz completa de Vice para construir palos a tu ritmo — no al de otros.",
+    "priceLabel": "Por sesión",
+    "priceUnit": "/ hora",
+    "includes": [
+      "Sesión con launch monitor en Son Gual",
+      "Análisis completo o palo individual",
+      "Cabezas, shafts y grips Vice a medida",
+      "Build sheet enviado por email"
+    ],
+    "cta": "Reservar slot"
+  },
+  "demoSection": {
+    "eyebrow": "Demo Days",
+    "title": "Prueba toda la línea Vice. Invitamos nosotros.",
+    "body": "Demo days públicos por Mallorca. Sin cita, sin coste — ven y prueba los palos.",
+    "empty": "No hay demo days programados. Vuelve pronto o contacta para una sesión privada.",
+    "cta": "Ver todos los demo days",
+    "rsvp": "Apuntar fecha"
+  },
+  "aboutSection": {
+    "eyebrow": "Sobre Gero",
+    "title": "Fittings que respetan tu juego.",
+    "body": "Soy Gero — golfista, fitter y el único fitter Vice certificado en Mallorca. Creé este servicio para jugadores cansados de adivinar y listos para pegar el palo correcto, siempre."
+  },
+  "productsSection": {
+    "eyebrow": "Equipamiento Vice",
+    "title": "El catálogo completo de Vice.",
+    "body": "Drivers, maderas, hierros, wedges, putters, bolas y apparel — fitteados y pedidos a través mío como tu distribuidor local de Mallorca.",
+    "cta": "Ver la línea"
+  },
+  "contactSection": {
+    "eyebrow": "Contacto",
+    "title": "¿Dudas? Habla directamente conmigo.",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "whatsappNote": "Respuesta más rápida",
+    "emailNote": "Para consultas largas"
+  },
+  "book": {
+    "title": "Reserva tu fitting",
+    "subtitle": "60 minutos en Son Gual — 90 €. Pago seguro con tarjeta, invitación al calendario al instante.",
+    "fields": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono (opcional)",
+      "date": "Fecha",
+      "time": "Hora",
+      "notes": "Notas para Gero (opcional)",
+      "notesPlaceholder": "Hándicap, en qué te gustaría enfocarte, etc."
+    },
+    "summary": "Resumen",
+    "session": "Fitting Vice · 60 min · Son Gual",
+    "total": "Total",
+    "submit": "Continuar al pago",
+    "submitting": "Redirigiendo…",
+    "selectDate": "Selecciona una fecha",
+    "noSlots": "No hay slots disponibles ese día",
+    "errors": {
+      "required": "Campo obligatorio",
+      "email": "Introduce un email válido",
+      "slotTaken": "Lo sentimos, ese slot acaba de ocuparse. Elige otro.",
+      "generic": "Algo salió mal. Inténtalo de nuevo."
+    }
+  },
+  "success": {
+    "title": "Reservado.",
+    "body": "Tu fitting está confirmado. Revisa tu email para la invitación al calendario y los detalles. Nos vemos en Son Gual.",
+    "cta": "Volver al inicio"
+  },
+  "cancel": {
+    "title": "Pago cancelado",
+    "body": "Sin problema. Tu slot no se ha reservado — vuelve a intentarlo o escríbeme por WhatsApp.",
+    "cta": "Intentar de nuevo"
+  },
+  "footer": {
+    "tagline": "Distribuidor y fitter oficial de Vice Golf en Mallorca.",
+    "rights": "Todos los derechos reservados.",
+    "imprint": "Aviso legal",
+    "privacy": "Privacidad"
+  },
+  "common": {
+    "from": "desde",
+    "perHour": "por hora",
+    "loading": "Cargando…"
+  }
+}

@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vice Fitting Mallorca
 
-## Getting Started
+Public site + booking system for Gero Walther, official Vice Golf retailer/fitter on Mallorca.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) + TypeScript + Tailwind v4
+- shadcn/ui (base-nova) + Lucide icons
+- MongoDB Atlas via Mongoose
+- Stripe Checkout (€90 / 60 min private fitting at Son Gual)
+- Resend for confirmation emails + `.ics` calendar attachments (the booking lands in the customer's calendar with reminders, and a copy is sent to Gero so it shows up in his Mac Calendar too)
+- next-intl for DE / EN / ES
+- Single-admin auth via env-var password + signed JWT cookie
+
+## Routes
+
+- `/(en|de|es)` — public site (home, fitting, demo-days, products, contact, about, book)
+- `/admin` — protected dashboard (bookings list + demo-day CRUD)
+- `/api/checkout`, `/api/webhooks/stripe`, `/api/availability`, `/api/admin/*`
+
+## Local setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local       # then fill in real values
+npm run dev                      # http://localhost:2020
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Required env vars (see `.env.example`)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Var | Where to get it |
+| --- | --- |
+| `MONGODB_URI` | Atlas → Connect → Drivers → Node.js |
+| `ADMIN_PASSWORD` | Pick anything strong |
+| `ADMIN_SESSION_SECRET` | `openssl rand -hex 32` |
+| `STRIPE_SECRET_KEY` | Stripe dashboard → API keys |
+| `STRIPE_WEBHOOK_SECRET` | `stripe listen --forward-to http://localhost:2020/api/webhooks/stripe` |
+| `RESEND_API_KEY` | resend.com → API keys |
+| `RESEND_FROM` | A verified sender on Resend |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:2020` for dev, real domain for prod |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Stripe webhook (local)
 
-## Learn More
+In a second terminal:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+stripe listen --forward-to http://localhost:2020/api/webhooks/stripe
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy the `whsec_…` it prints into `STRIPE_WEBHOOK_SECRET`. Trigger a test purchase from `/en/book` with card `4242 4242 4242 4242`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Admin
 
-## Deploy on Vercel
+Open `/admin/login`, enter `ADMIN_PASSWORD`. The session cookie is HTTP-only, JWT-signed, and expires in 12h. The `/admin/*` routes are protected by Next's proxy (formerly middleware).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To rotate: change `ADMIN_PASSWORD` in `.env.local` (or in your host's env). Existing sessions stay valid for 12h unless you also rotate `ADMIN_SESSION_SECRET`, which invalidates them immediately.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying
+
+1. Push to GitHub, import into Vercel.
+2. Add all env vars from `.env.example` (set `NEXT_PUBLIC_SITE_URL` to your real domain).
+3. In MongoDB Atlas → Network Access, add `0.0.0.0/0` (Vercel's IPs rotate).
+4. In Stripe → Webhooks, add a production endpoint `https://YOURDOMAIN/api/webhooks/stripe` (events: `checkout.session.completed`, `checkout.session.expired`). Paste the new signing secret into Vercel as `STRIPE_WEBHOOK_SECRET`.
+5. In Resend, verify the sending domain you picked for `RESEND_FROM`.
+
+## Notes
+
+- Booking slots are defined in `src/lib/constants.ts → DAILY_SLOTS`. Sundays are blocked. Past slots are auto-disabled.
+- The DB enforces one paid/pending booking per `startsAt` via a partial unique index — concurrent double-booking attempts get a 409.
+- The `vicefitting` MongoDB database is created automatically on first write.
+- Online shop is intentionally deferred to phase 2 (pending Vice retailer rules on direct online sales).
