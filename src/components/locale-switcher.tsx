@@ -44,14 +44,13 @@ export function LocaleSwitcher() {
         {LOCALES.map((l) => (
           <DropdownMenuItem
             key={l}
-            onSelect={(event) => {
-              event.preventDefault();
-              onSelect(l);
-            }}
+            onClick={() => onSelect(l)}
             className="font-mono text-xs uppercase tracking-wider cursor-pointer"
           >
             {LOCALE_LABELS[l]}
-            {l === locale && <span className="ml-auto text-volt">●</span>}
+            {l === locale && (
+              <span className="ml-auto inline-block size-2 rounded-full bg-foreground" />
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

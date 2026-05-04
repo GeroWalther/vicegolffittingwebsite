@@ -22,6 +22,10 @@
     "players": "Jugadores ajustados",
     "rating": "Valoración media"
   },
+  "pressSection": {
+    "title": "Visto en",
+    "attribution": "Vice Golf destacado por"
+  },
   "fittingSection": {
     "eyebrow": "Fitting Privado",
     "title": "60 minutos. Construido para tu swing.",

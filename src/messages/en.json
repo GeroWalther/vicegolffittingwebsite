@@ -22,6 +22,10 @@
     "players": "Players dialed in",
     "rating": "Average review"
   },
+  "pressSection": {
+    "title": "As seen in",
+    "attribution": "Vice Golf featured by"
+  },
   "fittingSection": {
     "eyebrow": "Private Fitting",
     "title": "60 minutes. Built around your swing.",

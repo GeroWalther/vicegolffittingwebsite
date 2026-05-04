@@ -54,13 +54,13 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative h-[260px] sm:h-[380px] lg:h-[560px] -mx-6 sm:mx-0">
+          <div className="lg:col-span-5 relative h-[300px] sm:h-[440px] lg:h-[620px] -mx-6 sm:mx-0">
             <Image
-              src="/images/iron.png"
-              alt="Vice Golf iron"
+              src="/images/driver.webp"
+              alt="Vice Golf VGD01 driver"
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 42vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-contain object-center lg:object-right lg:scale-125"
             />
           </div>

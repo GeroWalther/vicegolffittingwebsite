@@ -22,6 +22,10 @@
     "players": "Spieler gefittet",
     "rating": "Ø Bewertung"
   },
+  "pressSection": {
+    "title": "Bekannt durch",
+    "attribution": "Vice Golf empfohlen von"
+  },
   "fittingSection": {
     "eyebrow": "Privates Fitting",
     "title": "60 Minuten. Auf deinen Schwung gebaut.",
