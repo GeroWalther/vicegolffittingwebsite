@@ -2,7 +2,6 @@
 
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
 import { useTransition } from "react";
 import { Globe } from "lucide-react";
 import {
@@ -11,28 +10,24 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { LOCALES } from "@/lib/constants";
+import { LOCALES, type Locale } from "@/lib/constants";
 
-const LOCALE_LABELS: Record<string, string> = {
+const LOCALE_LABELS: Record<Locale, string> = {
   en: "EN",
   de: "DE",
   es: "ES",
 };
 
 export function LocaleSwitcher() {
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
-  const params = useParams();
   const [isPending, startTransition] = useTransition();
 
-  function onSelect(next: (typeof LOCALES)[number]) {
+  function onSelect(next: Locale) {
+    if (next === locale) return;
     startTransition(() => {
-      router.replace(
-        // @ts-expect-error - dynamic path params are passed through
-        { pathname, params },
-        { locale: next },
-      );
+      router.replace(pathname, { locale: next });
     });
   }
 
@@ -49,8 +44,11 @@ export function LocaleSwitcher() {
         {LOCALES.map((l) => (
           <DropdownMenuItem
             key={l}
-            onSelect={() => onSelect(l)}
-            className="font-mono text-xs uppercase tracking-wider"
+            onSelect={(event) => {
+              event.preventDefault();
+              onSelect(l);
+            }}
+            className="font-mono text-xs uppercase tracking-wider cursor-pointer"
           >
             {LOCALE_LABELS[l]}
             {l === locale && <span className="ml-auto text-volt">●</span>}

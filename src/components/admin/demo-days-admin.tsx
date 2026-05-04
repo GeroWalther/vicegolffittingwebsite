@@ -204,7 +204,7 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
               className="rounded-md border border-border bg-card p-5 flex items-start justify-between gap-4"
             >
               <div className="flex-1">
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-volt">
+                <p className="inline-block bg-volt text-volt-foreground px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em]">
                   {new Date(d.startsAt).toLocaleString("en-GB", {
                     weekday: "short",
                     day: "2-digit",

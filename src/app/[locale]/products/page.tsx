@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight } from "lucide-react";
 import { LinkButton } from "@/components/ui/link-button";
@@ -5,14 +6,42 @@ import { LinkButton } from "@/components/ui/link-button";
 type Params = { params: Promise<{ locale: string }> };
 
 const CATEGORIES = [
-  { name: "Drivers", code: "VFT-01" },
-  { name: "Fairway Woods", code: "VFT-02" },
-  { name: "Hybrids", code: "VFT-03" },
-  { name: "Irons", code: "VFT-04" },
-  { name: "Wedges", code: "VFT-05" },
-  { name: "Putters", code: "VFT-06" },
-  { name: "Balls", code: "VFT-07" },
-  { name: "Apparel", code: "VFT-08" },
+  {
+    code: "01",
+    name: "Golf Balls",
+    image: "/images/balls.webp",
+    description: "Pro Plus, Pro, Tour & Drive — direct from Mallorca.",
+  },
+  {
+    code: "02",
+    name: "Clubs",
+    image: "/images/Vice-Golf-Landing-Page-Category-Golf-Clubs.webp",
+    description: "Drivers, woods, hybrids, irons. Built to your spec.",
+  },
+  {
+    code: "03",
+    name: "Bags",
+    image: "/images/bag.webp",
+    description: "Cart, stand, and tour bags in the full Vice line.",
+  },
+  {
+    code: "04",
+    name: "Gear",
+    image: "/images/Vice-Golf-Landing-Page-Category-Gear.webp",
+    description: "Towels, gloves, headcovers, accessories.",
+  },
+  {
+    code: "05",
+    name: "Wedges",
+    image: "/images/wedge.png",
+    description: "VGW wedges with custom grind options.",
+  },
+  {
+    code: "06",
+    name: "Irons",
+    image: "/images/iron.png",
+    description: "VGI03 forged players' irons & VGI distance series.",
+  },
 ];
 
 export default async function ProductsPage({ params }: Params) {
@@ -29,19 +58,33 @@ export default async function ProductsPage({ params }: Params) {
       </section>
 
       <section className="container-page pb-20">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {CATEGORIES.map((c) => (
-            <div
+            <article
               key={c.code}
-              className="group aspect-square rounded-md border border-border bg-card flex flex-col justify-between p-5 hover:border-volt/60 transition"
+              className="group rounded-md border border-border bg-card overflow-hidden"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                {c.code}
-              </span>
-              <span className="font-bold text-xl uppercase tracking-tight group-hover:text-volt transition">
-                {c.name}
-              </span>
-            </div>
+              <div className="relative aspect-[4/3] bg-muted">
+                <Image
+                  src={c.image}
+                  alt={c.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-5">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                  VFT-{c.code}
+                </span>
+                <h3 className="mt-2 font-heading text-2xl font-extrabold uppercase tracking-tight">
+                  {c.name}
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {c.description}
+                </p>
+              </div>
+            </article>
           ))}
         </div>
 
@@ -50,7 +93,11 @@ export default async function ProductsPage({ params }: Params) {
             Online ordering coming soon. For now, message me for stock and
             pricing — I&apos;ll arrange your kit through Vice direct.
           </p>
-          <LinkButton href="/contact" size="lg" className="mt-6 uppercase tracking-wider">
+          <LinkButton
+            href="/contact"
+            size="lg"
+            className="mt-6 uppercase tracking-wider"
+          >
             Get in touch <ArrowUpRight className="ml-1 size-4" />
           </LinkButton>
         </div>

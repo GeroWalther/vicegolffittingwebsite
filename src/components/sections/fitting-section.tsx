@@ -33,8 +33,8 @@ export function FittingSection() {
           <ul className="mt-8 space-y-3 border-t border-border/60 pt-6">
             {includes.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm">
-                <span className="mt-0.5 inline-flex size-5 items-center justify-center rounded-full bg-volt/15 text-volt">
-                  <Check className="size-3" />
+                <span className="mt-0.5 inline-flex size-5 items-center justify-center rounded-full bg-volt text-volt-foreground">
+                  <Check className="size-3" strokeWidth={3} />
                 </span>
                 <span>{item}</span>
               </li>

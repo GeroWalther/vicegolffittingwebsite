@@ -95,8 +95,8 @@ function BookingsTable({
   }
   return (
     <div className={muted ? "opacity-60" : ""}>
-      <div className="rounded-md border border-border overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="rounded-md border border-border overflow-x-auto">
+        <table className="w-full min-w-[760px] text-sm">
           <thead className="bg-muted/40 text-left">
             <tr className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
               <th className="px-4 py-3">When</th>
@@ -148,10 +148,10 @@ function BookingsTable({
 
 function StatusBadge({ status }: { status: string }) {
   const variant: Record<string, string> = {
-    paid: "bg-volt/20 text-volt border-volt/40",
-    pending: "bg-yellow-500/15 text-yellow-400 border-yellow-500/30",
+    paid: "bg-volt text-volt-foreground border-transparent",
+    pending: "bg-yellow-100 text-yellow-900 border-yellow-200",
     cancelled: "bg-muted text-muted-foreground border-border",
-    refunded: "bg-destructive/15 text-destructive border-destructive/30",
+    refunded: "bg-destructive/10 text-destructive border-destructive/30",
   };
   return (
     <Badge

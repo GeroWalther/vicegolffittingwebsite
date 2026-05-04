@@ -41,7 +41,7 @@ export function AdminNav() {
                   className={cn(
                     "px-3 py-1.5 text-sm font-mono uppercase tracking-wider rounded-md transition",
                     active
-                      ? "bg-volt text-volt-foreground"
+                      ? "bg-foreground text-background"
                       : "text-muted-foreground hover:text-foreground",
                   )}
                 >

@@ -43,7 +43,7 @@ export function DemoDaysSection({ demoDays }: { demoDays: DemoDayPreview[] }) {
                 key={d.id}
                 className="group rounded-md border border-border bg-card p-6 hover:border-volt/60 transition-colors"
               >
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-volt">
+                <p className="inline-block bg-volt text-volt-foreground px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em]">
                   {format.dateTime(date, {
                     weekday: "short",
                     day: "numeric",

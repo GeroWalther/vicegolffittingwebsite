@@ -15,7 +15,7 @@ export function AboutSection() {
             {t("body")}
           </p>
           <div className="mt-8 flex items-center gap-4 border-t border-border/40 pt-6">
-            <div className="size-12 rounded-full bg-volt/20 border border-volt/40 flex items-center justify-center font-bold text-volt">
+            <div className="size-12 rounded-full bg-volt border border-foreground/10 flex items-center justify-center font-bold text-volt-foreground">
               GW
             </div>
             <div>

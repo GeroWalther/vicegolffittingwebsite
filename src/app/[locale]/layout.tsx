@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Poppins, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -11,9 +11,16 @@ import { routing } from "@/i18n/routing";
 import { BUSINESS } from "@/lib/constants";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["600", "700", "800", "900"],
 });
 
 const geistMono = Geist_Mono({
@@ -51,7 +58,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <NextIntlClientProvider>
@@ -59,7 +66,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
           <WhatsAppButton />
-          <Toaster theme="dark" position="top-center" />
+          <Toaster theme="light" position="top-center" />
         </NextIntlClientProvider>
       </body>
     </html>

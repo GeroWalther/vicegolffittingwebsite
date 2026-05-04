@@ -26,9 +26,9 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/40 bg-background/85 backdrop-blur-xl">
       <div className="container-page flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="block size-2.5 rounded-full bg-volt transition group-hover:scale-110" />
-          <span className="font-mono text-xs uppercase tracking-[0.22em]">
-            Vice<span className="text-volt">/</span>Fitting
+          <span className="block size-3 rounded-full bg-volt transition group-hover:scale-110" />
+          <span className="font-heading text-sm font-extrabold uppercase tracking-tight">
+            Vice Fitting
           </span>
         </Link>
 
@@ -79,7 +79,7 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="px-2 py-3 text-base font-medium uppercase tracking-wide hover:text-volt"
+                className="px-2 py-3 text-base font-medium uppercase tracking-wide hover:underline"
               >
                 {t(link.key as keyof IntlMessages["nav"])}
               </Link>

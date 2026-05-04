@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/sections/hero";
 import { MarqueeBand } from "@/components/sections/marquee-band";
 import { FittingSection } from "@/components/sections/fitting-section";
+import { ProductCategories } from "@/components/sections/product-categories";
 import { DemoDaysSection, type DemoDayPreview } from "@/components/sections/demo-days-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { CtaSection } from "@/components/sections/cta-section";
@@ -47,6 +48,7 @@ export default async function HomePage({
       <Hero />
       <MarqueeBand />
       <FittingSection />
+      <ProductCategories />
       <DemoDaysSection demoDays={demoDays} />
       <AboutSection />
       <CtaSection />
