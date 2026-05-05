@@ -38,7 +38,9 @@
       "Cabezas, shafts y grips Vice a medida",
       "Build sheet enviado por email"
     ],
-    "cta": "Reservar slot"
+    "cta": "Reservar slot",
+    "creditTitle": "¿Comprar palos después? El fitting va por nuestra cuenta.",
+    "creditBody": "Los 90 € que pagas por el fitting se descuentan íntegramente de cualquier pedido Vice Golf que hagas conmigo después — un set completo de palos sale prácticamente sin coste de fitting."
   },
   "demoSection": {
     "eyebrow": "Demo Days",
@@ -82,6 +84,7 @@
     "summary": "Resumen",
     "session": "Fitting Vice · 60 min · Son Gual",
     "total": "Total",
+    "creditNote": "Se reembolsa al 100 % si pides palos después del fitting.",
     "submit": "Continuar al pago",
     "submitting": "Redirigiendo…",
     "selectDate": "Selecciona una fecha",

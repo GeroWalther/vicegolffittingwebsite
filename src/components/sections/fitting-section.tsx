@@ -8,7 +8,7 @@ export function FittingSection() {
   const includes = t.raw("includes") as string[];
 
   return (
-    <section className="container-page py-24 lg:py-32">
+    <section id="fitting" className="container-page py-24 lg:py-32 scroll-mt-20">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         <div>
           <p className="eyebrow mb-4">{t("eyebrow")}</p>
@@ -24,9 +24,11 @@ export function FittingSection() {
           <div className="absolute -top-3 left-8 bg-volt px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-volt-foreground">
             {t("priceLabel")}
           </div>
-          <div className="flex items-baseline gap-2">
-            <span className="display text-7xl">€{BUSINESS.fittingPriceEUR}</span>
-            <span className="text-muted-foreground font-mono text-sm">
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-heading text-2xl font-medium tracking-tight">
+              {BUSINESS.fittingPriceEUR} €
+            </span>
+            <span className="text-muted-foreground font-mono text-xs">
               {t("priceUnit")}
             </span>
           </div>
@@ -40,7 +42,16 @@ export function FittingSection() {
               </li>
             ))}
           </ul>
-          <LinkButton href="/book" size="lg" className="mt-8 w-full h-12 uppercase tracking-wider text-sm">
+          <div className="mt-6 rounded-md bg-volt p-4">
+            <p className="font-heading text-sm font-extrabold uppercase tracking-tight text-volt-foreground">
+              {t("creditTitle")}
+            </p>
+            <p className="mt-1 text-xs text-volt-foreground/85 leading-relaxed">
+              {t("creditBody")}
+            </p>
+          </div>
+
+          <LinkButton href="/book" size="lg" className="mt-6 w-full h-12 uppercase tracking-wider text-sm">
             {t("cta")}
             <ArrowUpRight className="ml-1 size-4" />
           </LinkButton>

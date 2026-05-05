@@ -38,7 +38,9 @@
       "Vice head, shaft & grip matching",
       "Build sheet emailed to you"
     ],
-    "cta": "Reserve your slot"
+    "cta": "Reserve your slot",
+    "creditTitle": "Buy clubs after? Fitting is on us.",
+    "creditBody": "The €90 you pay for the fitting is credited back against any Vice Golf order you place with me afterwards — so a full set of clubs becomes effectively free of fitting cost."
   },
   "demoSection": {
     "eyebrow": "Demo Days",
@@ -82,6 +84,7 @@
     "summary": "Summary",
     "session": "Vice fitting · 60 min · Son Gual",
     "total": "Total",
+    "creditNote": "100% credited back if you order clubs after the fitting.",
     "submit": "Continue to payment",
     "submitting": "Redirecting…",
     "selectDate": "Select a date",

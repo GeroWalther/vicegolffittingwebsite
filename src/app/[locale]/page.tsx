@@ -3,9 +3,13 @@ import { Hero } from "@/components/sections/hero";
 import { MarqueeBand } from "@/components/sections/marquee-band";
 import { PressSection } from "@/components/sections/press-section";
 import { FittingSection } from "@/components/sections/fitting-section";
-import { ProductCategories } from "@/components/sections/product-categories";
-import { DemoDaysSection, type DemoDayPreview } from "@/components/sections/demo-days-section";
+import { ProductsSection } from "@/components/sections/products-section";
+import {
+  DemoDaysSection,
+  type DemoDayPreview,
+} from "@/components/sections/demo-days-section";
 import { AboutSection } from "@/components/sections/about-section";
+import { ContactSection } from "@/components/sections/contact-section";
 import { CtaSection } from "@/components/sections/cta-section";
 import { connectDB } from "@/lib/db";
 import { DemoDay } from "@/lib/models/demoday";
@@ -20,7 +24,7 @@ async function getUpcomingDemoDays(): Promise<DemoDayPreview[]> {
       startsAt: { $gte: new Date() },
     })
       .sort({ startsAt: 1 })
-      .limit(3)
+      .limit(9)
       .lean();
     return items.map((d) => ({
       id: String(d._id),
@@ -50,9 +54,10 @@ export default async function HomePage({
       <MarqueeBand />
       <PressSection />
       <FittingSection />
-      <ProductCategories />
+      <ProductsSection />
       <DemoDaysSection demoDays={demoDays} />
       <AboutSection />
+      <ContactSection />
       <CtaSection />
     </>
   );

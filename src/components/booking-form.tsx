@@ -180,6 +180,9 @@ export function BookingForm() {
             <span className="eyebrow">{t("total")}</span>
             <span className="display text-3xl">€{BUSINESS.fittingPriceEUR}</span>
           </div>
+          <p className="mt-3 rounded-md bg-volt/15 border border-volt/40 px-3 py-2 text-xs leading-relaxed text-foreground">
+            {t("creditNote")}
+          </p>
           <Button type="submit" size="lg" disabled={!valid || pending} className="mt-6 w-full h-12 uppercase tracking-wider">
             {pending ? (
               <>

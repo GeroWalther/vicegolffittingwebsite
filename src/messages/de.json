@@ -38,7 +38,9 @@
       "Vice Köpfe, Schäfte & Griffe abgestimmt",
       "Build-Sheet per E-Mail"
     ],
-    "cta": "Slot reservieren"
+    "cta": "Slot reservieren",
+    "creditTitle": "Schläger kaufen? Fitting geht aufs Haus.",
+    "creditBody": "Die 90 €, die du fürs Fitting zahlst, werden 1:1 auf jede Vice Golf Bestellung angerechnet, die du danach bei mir aufgibst — ein kompletter Schlägersatz ist damit quasi ohne Fitting-Kosten."
   },
   "demoSection": {
     "eyebrow": "Demo Days",
@@ -82,6 +84,7 @@
     "summary": "Zusammenfassung",
     "session": "Vice Fitting · 60 Min · Son Gual",
     "total": "Gesamt",
+    "creditNote": "Wird zu 100 % verrechnet, wenn du nach dem Fitting Schläger bestellst.",
     "submit": "Weiter zur Zahlung",
     "submitting": "Weiterleiten…",
     "selectDate": "Datum wählen",

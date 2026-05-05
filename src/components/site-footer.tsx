@@ -1,14 +1,16 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { BUSINESS } from "@/lib/constants";
 
 export function SiteFooter() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
+  const locale = useLocale();
   const year = new Date().getFullYear();
+  const home = `/${locale}`;
 
   return (
-    <footer className="border-t border-border/40 mt-24">
+    <footer className="border-t border-border mt-24">
       <div className="container-page py-14 grid gap-10 lg:grid-cols-4">
         <div className="lg:col-span-2 space-y-4">
           <div className="flex items-center gap-2">
@@ -26,9 +28,9 @@ export function SiteFooter() {
         <div className="space-y-3">
           <p className="eyebrow">Site</p>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/fitting" className="hover:underline">{tNav("fitting")}</Link></li>
-            <li><Link href="/demo-days" className="hover:underline">{tNav("demoDays")}</Link></li>
-            <li><Link href="/products" className="hover:underline">{tNav("products")}</Link></li>
+            <li><a href={`${home}#fitting`} className="hover:underline">{tNav("fitting")}</a></li>
+            <li><a href={`${home}#products`} className="hover:underline">{tNav("products")}</a></li>
+            <li><a href={`${home}#demo-days`} className="hover:underline">{tNav("demoDays")}</a></li>
             <li><Link href="/book" className="hover:underline">{tNav("book")}</Link></li>
           </ul>
         </div>
@@ -54,12 +56,12 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-border/40">
+      <div className="border-t border-border">
         <div className="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>© {year} {BUSINESS.name}. {t("rights")}</p>
           <div className="flex gap-4">
-            <Link href="/" className="hover:underline">{t("imprint")}</Link>
-            <Link href="/" className="hover:underline">{t("privacy")}</Link>
+            <span className="opacity-60">{t("imprint")}</span>
+            <span className="opacity-60">{t("privacy")}</span>
           </div>
         </div>
       </div>

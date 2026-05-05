@@ -34,14 +34,12 @@ export function Hero() {
                 {t("cta")}
                 <ArrowUpRight className="ml-1 size-4" />
               </LinkButton>
-              <LinkButton
-                href="/demo-days"
-                size="lg"
-                variant="outline"
-                className="h-12 px-6 text-sm uppercase tracking-wider"
+              <a
+                href="#demo-days"
+                className="inline-flex items-center justify-center h-12 px-6 text-sm uppercase tracking-wider rounded-md border border-border bg-background hover:bg-muted transition font-medium"
               >
                 {t("secondary")}
-              </LinkButton>
+              </a>
             </div>
 
             <div className="mt-16 grid grid-cols-3 gap-4 sm:gap-6 max-w-2xl border-t border-border pt-8">

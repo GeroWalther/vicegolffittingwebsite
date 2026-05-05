@@ -4,7 +4,7 @@ import { BUSINESS } from "@/lib/constants";
 export function AboutSection() {
   const t = useTranslations("aboutSection");
   return (
-    <section className="container-page py-24 lg:py-32 border-t border-border/40">
+    <section id="about" className="container-page py-24 lg:py-32 scroll-mt-20 border-t border-border">
       <div className="grid lg:grid-cols-12 gap-10 items-end">
         <div className="lg:col-span-5">
           <p className="eyebrow mb-4">{t("eyebrow")}</p>
