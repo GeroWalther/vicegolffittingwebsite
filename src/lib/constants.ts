@@ -10,7 +10,7 @@ export const BUSINESS = {
   location: "Son Gual Golf, Mallorca",
   whatsappNumber: "+34637920961",
   whatsappDisplay: "+34 637 920 961",
-  email: "hello@vicefitting.example",
+  email: "hello@vicegolf-mallorca.com",
   fittingPriceCents: 9000,
   fittingPriceEUR: 90,
   fittingDurationMinutes: 60,

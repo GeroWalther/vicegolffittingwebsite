@@ -86,6 +86,13 @@ export async function POST(req: Request) {
         },
       },
     ],
+    payment_intent_data: {
+      // Up to 22 chars total (prefix + suffix combined). This is what shows on
+      // the customer's credit-card statement — keeps Vice Fitting bookings
+      // identifiable regardless of the account-level business name.
+      statement_descriptor_suffix: "VICEFITTING",
+      description: `Vice Golf Fitting · ${booking.name} · ${startsAt.toISOString()}`,
+    },
     metadata: { bookingId: String(booking._id) },
     success_url: `${SITE_URL}/${parsed.locale}/book/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${SITE_URL}/${parsed.locale}/book/cancel?session_id={CHECKOUT_SESSION_ID}`,
