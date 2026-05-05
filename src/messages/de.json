@@ -1,4 +1,10 @@
 {
+  "seo": {
+    "title": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter in Son Gual",
+    "titleTemplate": "%s · Vice Fitting Mallorca",
+    "description": "Persönliches Vice Golf Clubfitting in Son Gual, Mallorca. Launchmonitor, komplette Bag-Analyse, kompletter Vice Driver-/Eisen-/Wedge-/Putter-Katalog. 90 € / 60 Min — wird bei Schlägerkauf verrechnet.",
+    "ogAlt": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter in Son Gual"
+  },
   "nav": {
     "home": "Start",
     "fitting": "Fitting",

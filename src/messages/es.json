@@ -1,4 +1,10 @@
 {
+  "seo": {
+    "title": "Vice Fitting Mallorca — Fitter Oficial de Vice Golf en Son Gual",
+    "titleTemplate": "%s · Vice Fitting Mallorca",
+    "description": "Fitting personal de palos Vice Golf en Son Gual, Mallorca. Launch monitor, análisis completo del bag, gama completa de drivers/hierros/wedges/putters Vice. 90 € / 60 min — se descuenta al comprar palos.",
+    "ogAlt": "Vice Fitting Mallorca — Fitter Oficial de Vice Golf en Son Gual"
+  },
   "nav": {
     "home": "Inicio",
     "fitting": "Fitting",

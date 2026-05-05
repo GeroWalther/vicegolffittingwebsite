@@ -33,4 +33,26 @@ export const DAILY_SLOTS = [
 ] as const;
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:2020";
+
+// Approximate coordinates for Son Gual Golf, Mallorca
+export const VENUE_GEO = { lat: 39.5894, lng: 2.7567 };
+export const VENUE_ADDRESS = {
+  streetAddress: "Crta. Vieja Palma–Manacor, Km 11.5",
+  postalCode: "07199",
+  addressLocality: "Palma",
+  addressRegion: "Mallorca",
+  addressCountry: "ES",
+};
+
+export const SEO_KEYWORDS = [
+  "Vice Golf",
+  "Vice Golf Mallorca",
+  "Golf fitting Mallorca",
+  "Club fitting Mallorca",
+  "Son Gual fitting",
+  "Vice fitter",
+  "Vice Golf retailer Mallorca",
+  "Golf Schläger Fitting Mallorca",
+  "Fitting de palos Mallorca",
+];
