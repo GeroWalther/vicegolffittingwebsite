@@ -7,15 +7,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of routing.locales) {
-    const langs: Record<string, string> = {};
-    for (const l of routing.locales) langs[l] = `${SITE_URL}/${l}`;
+    const homeLangs: Record<string, string> = {};
+    const bookLangs: Record<string, string> = {};
+    for (const l of routing.locales) {
+      homeLangs[l] = `${SITE_URL}/${l}`;
+      bookLangs[l] = `${SITE_URL}/${l}/book`;
+    }
 
     entries.push({
       url: `${SITE_URL}/${locale}`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: locale === routing.defaultLocale ? 1 : 0.9,
-      alternates: { languages: langs },
+      alternates: { languages: homeLangs },
     });
 
     entries.push({
@@ -23,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
+      alternates: { languages: bookLangs },
     });
   }
 

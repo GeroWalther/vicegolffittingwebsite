@@ -21,7 +21,7 @@ async function getUpcomingDemoDays(): Promise<DemoDayPreview[]> {
     await connectDB();
     const items = await DemoDay.find({
       published: true,
-      startsAt: { $gte: new Date() },
+      endsAt: { $gte: new Date() },
     })
       .sort({ startsAt: 1 })
       .limit(9)

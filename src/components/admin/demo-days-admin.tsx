@@ -281,6 +281,7 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
                         year: "numeric",
                         hour: "2-digit",
                         minute: "2-digit",
+                        timeZone: "Europe/Madrid",
                       })}{" "}
                       — {d.slotMinutes}min slots
                     </p>
@@ -413,6 +414,7 @@ function RsvpsPanel({ demoDayId }: { demoDayId: string }) {
             month: "short",
             hour: "2-digit",
             minute: "2-digit",
+            timeZone: "Europe/Madrid",
           });
           return (
             <li
