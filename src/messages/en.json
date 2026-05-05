@@ -77,6 +77,27 @@
     "whatsappNote": "Fastest reply",
     "emailNote": "For longer questions"
   },
+  "rsvp": {
+    "eyebrow": "Sign up — free",
+    "ctaShort": "Reserve a slot",
+    "pickSlot": "Pick a time",
+    "minSlots": "min slots",
+    "noSlots": "No slots configured for this day yet.",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "handicap": "Handicap (optional)",
+    "handicapPlaceholder": "e.g. 12.4, +2 or scratch",
+    "submit": "Confirm signup",
+    "submitting": "Reserving…",
+    "freeNote": "Free of charge · email confirmation sent",
+    "doneTitle": "You're on the list.",
+    "doneBody": "Check your email for the calendar invite. Just turn up at the venue at your slot time.",
+    "close": "Close",
+    "loadError": "Could not load this demo day.",
+    "slotTaken": "Sorry, that slot was just taken. Please pick another.",
+    "genericError": "Something went wrong. Please try again."
+  },
   "book": {
     "title": "Book your fitting",
     "subtitle": "60 minutes at Son Gual — €90. Pay securely with card, get an instant calendar invite.",
@@ -86,8 +107,10 @@
       "phone": "Phone (optional)",
       "date": "Date",
       "time": "Time",
+      "handicap": "Handicap (optional)",
+      "handicapPlaceholder": "e.g. 12.4, +2 or scratch",
       "notes": "Notes for Gero (optional)",
-      "notesPlaceholder": "Handicap, what you'd like to focus on, etc."
+      "notesPlaceholder": "What you'd like to focus on, current clubs, etc."
     },
     "summary": "Summary",
     "session": "Vice fitting · 60 min · Son Gual",

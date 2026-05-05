@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import { useTranslations, useFormatter } from "next-intl";
-import { MapPin } from "lucide-react";
+import { MapPin, ArrowUpRight } from "lucide-react";
+import { DemoDayRsvpDialog } from "@/components/demo-day-rsvp-dialog";
 
 export type DemoDayPreview = {
   id: string;
@@ -11,10 +15,15 @@ export type DemoDayPreview = {
 
 export function DemoDaysSection({ demoDays }: { demoDays: DemoDayPreview[] }) {
   const t = useTranslations("demoSection");
+  const tRsvp = useTranslations("rsvp");
   const format = useFormatter();
+  const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section id="demo-days" className="container-page py-24 lg:py-32 scroll-mt-20 border-t border-border">
+    <section
+      id="demo-days"
+      className="container-page py-24 lg:py-32 scroll-mt-20 border-t border-border"
+    >
       <p className="eyebrow mb-4">{t("eyebrow")}</p>
       <h2 className="display text-4xl sm:text-5xl lg:text-6xl max-w-3xl">
         {t("title")}
@@ -31,9 +40,11 @@ export function DemoDaysSection({ demoDays }: { demoDays: DemoDayPreview[] }) {
             {demoDays.map((d) => {
               const date = new Date(d.startsAt);
               return (
-                <article
+                <button
                   key={d.id}
-                  className="group rounded-md border border-border bg-card p-6 hover:border-foreground/40 transition-colors"
+                  type="button"
+                  onClick={() => setOpenId(d.id)}
+                  className="group text-left rounded-md border border-border bg-card p-6 hover:border-foreground/40 transition-colors"
                 >
                   <p className="inline-block bg-volt text-volt-foreground px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em]">
                     {format.dateTime(date, {
@@ -42,23 +53,38 @@ export function DemoDaysSection({ demoDays }: { demoDays: DemoDayPreview[] }) {
                       month: "short",
                     })}
                   </p>
-                  <h3 className="mt-3 text-xl font-semibold tracking-tight">{d.title}</h3>
+                  <h3 className="mt-3 text-xl font-semibold tracking-tight">
+                    {d.title}
+                  </h3>
                   <p className="mt-3 flex items-center gap-1.5 text-sm text-muted-foreground">
                     <MapPin className="size-3.5" /> {d.venue}
                   </p>
                   <p className="mt-1 font-mono text-xs text-muted-foreground">
-                    {format.dateTime(date, { hour: "2-digit", minute: "2-digit" })} —{" "}
+                    {format.dateTime(date, {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}{" "}
+                    —{" "}
                     {format.dateTime(new Date(d.endsAt), {
                       hour: "2-digit",
                       minute: "2-digit",
                     })}
                   </p>
-                </article>
+                  <p className="mt-5 inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-foreground group-hover:gap-2 transition-all">
+                    {tRsvp("ctaShort")} <ArrowUpRight className="size-3.5" />
+                  </p>
+                </button>
               );
             })}
           </div>
         )}
       </div>
+
+      <DemoDayRsvpDialog
+        open={openId !== null}
+        onOpenChange={(v) => !v && setOpenId(null)}
+        demoDayId={openId}
+      />
     </section>
   );
 }

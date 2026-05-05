@@ -77,6 +77,27 @@
     "whatsappNote": "Respuesta más rápida",
     "emailNote": "Para consultas largas"
   },
+  "rsvp": {
+    "eyebrow": "Inscripción — gratis",
+    "ctaShort": "Reservar slot",
+    "pickSlot": "Elige hora",
+    "minSlots": "min slots",
+    "noSlots": "Aún no hay slots configurados para este día.",
+    "name": "Nombre completo",
+    "email": "Email",
+    "phone": "Teléfono",
+    "handicap": "Hándicap (opcional)",
+    "handicapPlaceholder": "p. ej. 12.4 o +2",
+    "submit": "Confirmar inscripción",
+    "submitting": "Reservando…",
+    "freeNote": "Gratis · se envía email de confirmación",
+    "doneTitle": "Estás dentro.",
+    "doneBody": "Revisa tu email para la invitación al calendario. Ven al recinto a la hora de tu slot.",
+    "close": "Cerrar",
+    "loadError": "No se pudo cargar el demo day.",
+    "slotTaken": "Lo sentimos, ese slot acaba de reservarse. Elige otro.",
+    "genericError": "Algo salió mal. Inténtalo de nuevo."
+  },
   "book": {
     "title": "Reserva tu fitting",
     "subtitle": "60 minutos en Son Gual — 90 €. Pago seguro con tarjeta, invitación al calendario al instante.",
@@ -86,8 +107,10 @@
       "phone": "Teléfono (opcional)",
       "date": "Fecha",
       "time": "Hora",
+      "handicap": "Hándicap (opcional)",
+      "handicapPlaceholder": "p. ej. 12.4 o +2",
       "notes": "Notas para Gero (opcional)",
-      "notesPlaceholder": "Hándicap, en qué te gustaría enfocarte, etc."
+      "notesPlaceholder": "En qué te gustaría enfocarte, palos actuales, etc."
     },
     "summary": "Resumen",
     "session": "Fitting Vice · 60 min · Son Gual",

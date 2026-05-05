@@ -28,6 +28,7 @@ export function BookingForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [handicap, setHandicap] = useState("");
   const [notes, setNotes] = useState("");
 
   useEffect(() => {
@@ -61,6 +62,7 @@ export function BookingForm() {
             name,
             email,
             phone,
+            handicap,
             notes,
             locale,
           }),
@@ -147,6 +149,16 @@ export function BookingForm() {
           <div className="space-y-2">
             <Label htmlFor="phone" className="eyebrow">{t("fields.phone")}</Label>
             <Input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          </div>
+          <div className="space-y-2 sm:col-span-2">
+            <Label htmlFor="handicap" className="eyebrow">{t("fields.handicap")}</Label>
+            <Input
+              id="handicap"
+              maxLength={16}
+              placeholder={t("fields.handicapPlaceholder")}
+              value={handicap}
+              onChange={(e) => setHandicap(e.target.value)}
+            />
           </div>
           <div className="space-y-2 sm:col-span-2">
             <Label htmlFor="notes" className="eyebrow">{t("fields.notes")}</Label>

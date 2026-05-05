@@ -11,6 +11,7 @@ const Body = z.object({
   name: z.string().min(1).max(120),
   email: z.string().email(),
   phone: z.string().max(40).optional().default(""),
+  handicap: z.string().max(16).optional().default(""),
   notes: z.string().max(2000).optional().default(""),
   locale: z.enum(["en", "de", "es"]).default("en"),
 });
@@ -48,6 +49,7 @@ export async function POST(req: Request) {
       name: parsed.name.trim(),
       email: parsed.email.trim().toLowerCase(),
       phone: parsed.phone.trim(),
+      handicap: parsed.handicap.trim(),
       notes: parsed.notes.trim(),
       startsAt,
       endsAt,

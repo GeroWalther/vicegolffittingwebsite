@@ -77,6 +77,27 @@
     "whatsappNote": "Schnellste Antwort",
     "emailNote": "Für längere Anfragen"
   },
+  "rsvp": {
+    "eyebrow": "Anmeldung — kostenlos",
+    "ctaShort": "Slot reservieren",
+    "pickSlot": "Uhrzeit wählen",
+    "minSlots": "Min Slots",
+    "noSlots": "Für diesen Tag sind noch keine Slots konfiguriert.",
+    "name": "Vollständiger Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "handicap": "Handicap (optional)",
+    "handicapPlaceholder": "z.B. 12,4 oder +2",
+    "submit": "Anmeldung bestätigen",
+    "submitting": "Reservieren…",
+    "freeNote": "Kostenlos · Bestätigungs-E-Mail wird verschickt",
+    "doneTitle": "Du bist dabei.",
+    "doneBody": "Schau in dein Postfach für die Kalendereinladung. Komm einfach zur angegebenen Zeit am Veranstaltungsort vorbei.",
+    "close": "Schließen",
+    "loadError": "Demo Day konnte nicht geladen werden.",
+    "slotTaken": "Dieser Slot wurde gerade reserviert. Bitte wähle einen anderen.",
+    "genericError": "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+  },
   "book": {
     "title": "Dein Fitting buchen",
     "subtitle": "60 Minuten in Son Gual — 90 €. Sichere Kartenzahlung, sofortige Kalendereinladung.",
@@ -86,8 +107,10 @@
       "phone": "Telefon (optional)",
       "date": "Datum",
       "time": "Uhrzeit",
+      "handicap": "Handicap (optional)",
+      "handicapPlaceholder": "z.B. 12,4 oder +2",
       "notes": "Hinweise an Gero (optional)",
-      "notesPlaceholder": "Handicap, Fokus deiner Session, etc."
+      "notesPlaceholder": "Worauf du dich fokussieren möchtest, aktuelle Schläger, etc."
     },
     "summary": "Zusammenfassung",
     "session": "Vice Fitting · 60 Min · Son Gual",

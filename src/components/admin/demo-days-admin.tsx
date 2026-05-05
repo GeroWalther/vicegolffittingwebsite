@@ -1,7 +1,17 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import { Plus, Trash2, Loader2, Save, X } from "lucide-react";
+import { useEffect, useState, useTransition } from "react";
+import {
+  Plus,
+  Trash2,
+  Loader2,
+  Save,
+  X,
+  ChevronDown,
+  ChevronUp,
+  Mail,
+  Phone,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,7 +26,21 @@ type DemoDay = {
   description: string;
   startsAt: string;
   endsAt: string;
+  slotMinutes: number;
   published: boolean;
+};
+
+type Rsvp = {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  handicap: string;
+  slotStartsAt: string;
+  slotEndsAt: string;
+  status: string;
+  locale: string;
+  createdAt: string;
 };
 
 const EMPTY_DRAFT = {
@@ -26,6 +50,7 @@ const EMPTY_DRAFT = {
   description: "",
   startsAt: "",
   endsAt: "",
+  slotMinutes: 30,
   published: true,
 };
 
@@ -35,6 +60,7 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
   const [items, setItems] = useState<DemoDay[]>(initial);
   const [draft, setDraft] = useState<Draft | null>(null);
   const [pending, startTransition] = useTransition();
+  const [expanded, setExpanded] = useState<string | null>(null);
 
   function openNew() {
     const start = new Date();
@@ -80,7 +106,9 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
   function remove(id: string) {
     if (!confirm("Delete this demo day?")) return;
     startTransition(async () => {
-      const res = await fetch(`/api/admin/demo-days/${id}`, { method: "DELETE" });
+      const res = await fetch(`/api/admin/demo-days/${id}`, {
+        method: "DELETE",
+      });
       if (!res.ok) {
         toast.error("Failed to delete");
         return;
@@ -113,7 +141,11 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
     <div>
       <div className="mb-6">
         {!draft ? (
-          <Button onClick={openNew} size="lg" className="uppercase tracking-wider">
+          <Button
+            onClick={openNew}
+            size="lg"
+            className="uppercase tracking-wider"
+          >
             <Plus className="size-4" /> New demo day
           </Button>
         ) : (
@@ -122,34 +154,58 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
               <Field label="Title">
                 <Input
                   value={draft.title}
-                  onChange={(e) => setDraft({ ...draft, title: e.target.value })}
+                  onChange={(e) =>
+                    setDraft({ ...draft, title: e.target.value })
+                  }
                 />
               </Field>
               <Field label="Venue">
                 <Input
                   value={draft.venue}
-                  onChange={(e) => setDraft({ ...draft, venue: e.target.value })}
+                  onChange={(e) =>
+                    setDraft({ ...draft, venue: e.target.value })
+                  }
                 />
               </Field>
               <Field label="Address">
                 <Input
                   value={draft.address}
-                  onChange={(e) => setDraft({ ...draft, address: e.target.value })}
+                  onChange={(e) =>
+                    setDraft({ ...draft, address: e.target.value })
+                  }
                 />
               </Field>
-              <div />
+              <Field label="Slot duration (min)">
+                <Input
+                  type="number"
+                  min={15}
+                  max={240}
+                  step={15}
+                  value={draft.slotMinutes}
+                  onChange={(e) =>
+                    setDraft({
+                      ...draft,
+                      slotMinutes: Math.max(15, Number(e.target.value) || 30),
+                    })
+                  }
+                />
+              </Field>
               <Field label="Starts">
                 <Input
                   type="datetime-local"
                   value={draft.startsAt}
-                  onChange={(e) => setDraft({ ...draft, startsAt: e.target.value })}
+                  onChange={(e) =>
+                    setDraft({ ...draft, startsAt: e.target.value })
+                  }
                 />
               </Field>
               <Field label="Ends">
                 <Input
                   type="datetime-local"
                   value={draft.endsAt}
-                  onChange={(e) => setDraft({ ...draft, endsAt: e.target.value })}
+                  onChange={(e) =>
+                    setDraft({ ...draft, endsAt: e.target.value })
+                  }
                 />
               </Field>
               <div className="sm:col-span-2">
@@ -178,10 +234,20 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
             <div className="flex gap-2">
               <Button
                 onClick={save}
-                disabled={pending || !draft.title || !draft.venue || !draft.startsAt || !draft.endsAt}
+                disabled={
+                  pending ||
+                  !draft.title ||
+                  !draft.venue ||
+                  !draft.startsAt ||
+                  !draft.endsAt
+                }
                 className="uppercase tracking-wider"
               >
-                {pending ? <Loader2 className="size-4 animate-spin" /> : <Save className="size-4" />}
+                {pending ? (
+                  <Loader2 className="size-4 animate-spin" />
+                ) : (
+                  <Save className="size-4" />
+                )}
                 Save
               </Button>
               <Button variant="outline" onClick={() => setDraft(null)}>
@@ -198,57 +264,221 @@ export function DemoDaysAdmin({ initial }: { initial: DemoDay[] }) {
         </div>
       ) : (
         <div className="space-y-3">
-          {items.map((d) => (
-            <div
-              key={d.id}
-              className="rounded-md border border-border bg-card p-5 flex items-start justify-between gap-4"
-            >
-              <div className="flex-1">
-                <p className="inline-block bg-volt text-volt-foreground px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em]">
-                  {new Date(d.startsAt).toLocaleString("en-GB", {
-                    weekday: "short",
-                    day: "2-digit",
-                    month: "short",
-                    year: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </p>
-                <h3 className="mt-1 text-lg font-semibold">{d.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {d.venue}{d.address ? ` · ${d.address}` : ""}
-                </p>
-                {d.description && (
-                  <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                    {d.description}
-                  </p>
-                )}
-              </div>
-              <div className="flex flex-col gap-2 items-end">
+          {items.map((d) => {
+            const isOpen = expanded === d.id;
+            return (
+              <div
+                key={d.id}
+                className="rounded-md border border-border bg-card overflow-hidden"
+              >
+                <div className="p-5 flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="inline-block bg-volt text-volt-foreground px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em]">
+                      {new Date(d.startsAt).toLocaleString("en-GB", {
+                        weekday: "short",
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}{" "}
+                      — {d.slotMinutes}min slots
+                    </p>
+                    <h3 className="mt-1 text-lg font-semibold">{d.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {d.venue}
+                      {d.address ? ` · ${d.address}` : ""}
+                    </p>
+                    {d.description && (
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                        {d.description}
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex flex-col gap-2 items-end">
+                    <button
+                      onClick={() => togglePublish(d)}
+                      className={`text-[10px] font-mono uppercase tracking-wider px-2 py-1 rounded border ${
+                        d.published
+                          ? "border-foreground/50 text-foreground"
+                          : "border-border text-muted-foreground"
+                      }`}
+                    >
+                      {d.published ? "Published" : "Draft"}
+                    </button>
+                    <Button
+                      size="sm"
+                      variant="destructive"
+                      onClick={() => remove(d.id)}
+                      disabled={pending}
+                    >
+                      <Trash2 className="size-3.5" />
+                    </Button>
+                  </div>
+                </div>
                 <button
-                  onClick={() => togglePublish(d)}
-                  className={`text-[10px] font-mono uppercase tracking-wider px-2 py-1 rounded border ${d.published ? "border-volt/50 text-volt" : "border-border text-muted-foreground"}`}
+                  type="button"
+                  onClick={() => setExpanded(isOpen ? null : d.id)}
+                  className="w-full flex items-center justify-between px-5 py-2.5 border-t border-border text-xs font-mono uppercase tracking-wider text-muted-foreground hover:bg-muted/40 transition"
                 >
-                  {d.published ? "Published" : "Draft"}
+                  <span>{isOpen ? "Hide signups" : "View signups"}</span>
+                  {isOpen ? (
+                    <ChevronUp className="size-3.5" />
+                  ) : (
+                    <ChevronDown className="size-3.5" />
+                  )}
                 </button>
-                <Button
-                  size="sm"
-                  variant="destructive"
-                  onClick={() => remove(d.id)}
-                  disabled={pending}
-                >
-                  <Trash2 className="size-3.5" />
-                </Button>
+                {isOpen && <RsvpsPanel demoDayId={d.id} />}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function RsvpsPanel({ demoDayId }: { demoDayId: string }) {
+  const [rsvps, setRsvps] = useState<Rsvp[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [busyId, setBusyId] = useState<string | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    fetch(`/api/admin/demo-days/${demoDayId}/rsvps`, { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(r)))
+      .then((j) => alive && setRsvps(j.rsvps))
+      .catch(() => alive && setError("Failed to load signups."));
+    return () => {
+      alive = false;
+    };
+  }, [demoDayId]);
+
+  async function cancel(rsvpId: string) {
+    if (!confirm("Cancel this RSVP?")) return;
+    setBusyId(rsvpId);
+    const res = await fetch(
+      `/api/admin/demo-days/${demoDayId}/rsvps?rsvpId=${rsvpId}`,
+      { method: "DELETE" },
+    );
+    setBusyId(null);
+    if (!res.ok) {
+      toast.error("Failed to cancel");
+      return;
+    }
+    setRsvps((prev) =>
+      prev
+        ? prev.map((r) => (r.id === rsvpId ? { ...r, status: "cancelled" } : r))
+        : prev,
+    );
+  }
+
+  if (error) {
+    return (
+      <p className="px-5 py-4 text-sm text-destructive border-t border-border">
+        {error}
+      </p>
+    );
+  }
+  if (!rsvps) {
+    return (
+      <p className="px-5 py-4 text-sm text-muted-foreground border-t border-border flex items-center gap-2">
+        <Loader2 className="size-3.5 animate-spin" /> Loading…
+      </p>
+    );
+  }
+  const confirmed = rsvps.filter((r) => r.status === "confirmed");
+  const cancelled = rsvps.filter((r) => r.status === "cancelled");
+
+  if (rsvps.length === 0) {
+    return (
+      <p className="px-5 py-6 text-sm text-muted-foreground border-t border-border text-center">
+        No signups yet.
+      </p>
+    );
+  }
+
+  return (
+    <div className="border-t border-border">
+      <div className="px-5 py-3 border-b border-border bg-muted/30 flex items-center justify-between">
+        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+          {confirmed.length} confirmed
+          {cancelled.length > 0 && ` · ${cancelled.length} cancelled`}
+        </span>
+      </div>
+      <ul className="divide-y divide-border">
+        {[...confirmed, ...cancelled].map((r) => {
+          const slotTime = new Date(r.slotStartsAt).toLocaleString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          return (
+            <li
+              key={r.id}
+              className={`px-5 py-3 flex items-center gap-3 text-sm ${
+                r.status === "cancelled" ? "opacity-50" : ""
+              }`}
+            >
+              <span className="font-mono text-xs w-24 shrink-0">
+                {slotTime}
+              </span>
+              <div className="flex-1 min-w-0">
+                <div className="font-semibold truncate flex items-center gap-2">
+                  {r.name}
+                  {r.handicap && (
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground bg-muted px-1.5 py-0.5 rounded">
+                      HCP {r.handicap}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
+                  <span className="inline-flex items-center gap-1">
+                    <Mail className="size-3" /> {r.email}
+                  </span>
+                  {r.phone && (
+                    <span className="inline-flex items-center gap-1">
+                      <Phone className="size-3" /> {r.phone}
+                    </span>
+                  )}
+                </div>
+              </div>
+              {r.status === "confirmed" && (
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={() => cancel(r.id)}
+                  disabled={busyId === r.id}
+                  className="text-xs"
+                >
+                  {busyId === r.id ? (
+                    <Loader2 className="size-3 animate-spin" />
+                  ) : (
+                    "Cancel"
+                  )}
+                </Button>
+              )}
+              {r.status === "cancelled" && (
+                <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                  cancelled
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="space-y-1.5">
       <Label className="eyebrow">{label}</Label>

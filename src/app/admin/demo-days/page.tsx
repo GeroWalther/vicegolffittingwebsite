@@ -17,6 +17,7 @@ async function getAll() {
       description: d.description ?? "",
       startsAt: d.startsAt.toISOString(),
       endsAt: d.endsAt.toISOString(),
+      slotMinutes: d.slotMinutes ?? 30,
       published: !!d.published,
     }));
   } catch (e) {

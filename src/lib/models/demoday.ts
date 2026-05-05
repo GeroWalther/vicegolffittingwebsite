@@ -8,6 +8,7 @@ const DemoDaySchema = new Schema(
     description: { type: String, trim: true },
     startsAt: { type: Date, required: true, index: true },
     endsAt: { type: Date, required: true },
+    slotMinutes: { type: Number, default: 30, min: 15, max: 240 },
     published: { type: Boolean, default: true, index: true },
   },
   { timestamps: true },

@@ -5,6 +5,7 @@ const BookingSchema = new Schema(
     name: { type: String, required: true, trim: true },
     email: { type: String, required: true, trim: true, lowercase: true },
     phone: { type: String, trim: true },
+    handicap: { type: String, trim: true, maxlength: 16 },
     notes: { type: String, trim: true },
     startsAt: { type: Date, required: true, index: true },
     endsAt: { type: Date, required: true },

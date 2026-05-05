@@ -122,6 +122,11 @@ function BookingsTable({
                 <td className="px-4 py-3 text-xs space-y-0.5">
                   <div>{b.email}</div>
                   {b.phone && <div className="text-muted-foreground">{b.phone}</div>}
+                  {b.handicap && (
+                    <div className="text-muted-foreground font-mono">
+                      HCP {b.handicap}
+                    </div>
+                  )}
                 </td>
                 <td className="px-4 py-3 max-w-xs">
                   <p className="text-xs text-muted-foreground line-clamp-3">
