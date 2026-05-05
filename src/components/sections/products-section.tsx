@@ -57,15 +57,14 @@ export function ProductsSection() {
 
       <div className="mt-10 rounded-md border border-dashed border-border p-8 text-center">
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Online ordering coming soon. For now, message me for stock and
-          pricing — I&apos;ll arrange your kit through Vice direct.
+          {t("orderNote")}
         </p>
         <LinkButton
           href="#contact"
           size="lg"
           className="mt-6 uppercase tracking-wider"
         >
-          Get in touch <ArrowUpRight className="ml-1 size-4" />
+          {t("orderCta")} <ArrowUpRight className="ml-1 size-4" />
         </LinkButton>
       </div>
     </section>

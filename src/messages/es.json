@@ -45,7 +45,7 @@
   "demoSection": {
     "eyebrow": "Demo Days",
     "title": "Prueba toda la línea Vice. Invitamos nosotros.",
-    "body": "Demo days públicos por Mallorca. Sin cita, sin coste — ven y prueba los palos.",
+    "body": "Demo days públicos por Mallorca. Gratis — inscríbete directamente en el club anfitrión y ven a probar los palos.",
     "empty": "No hay demo days programados. Vuelve pronto o contacta para una sesión privada.",
     "cta": "Ver todos los demo days",
     "rsvp": "Apuntar fecha"
@@ -59,7 +59,9 @@
     "eyebrow": "Equipamiento Vice",
     "title": "El catálogo completo de Vice.",
     "body": "Drivers, maderas, hierros, wedges, putters, bolas y apparel — fitteados y pedidos a través mío como tu distribuidor local de Mallorca.",
-    "cta": "Ver la línea"
+    "cta": "Ver la línea",
+    "orderNote": "Escríbeme directamente para stock y precios — yo me encargo de tu pedido a través de Vice directo.",
+    "orderCta": "Contactar"
   },
   "contactSection": {
     "eyebrow": "Contacto",

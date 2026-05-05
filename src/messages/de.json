@@ -45,7 +45,7 @@
   "demoSection": {
     "eyebrow": "Demo Days",
     "title": "Probiere die ganze Vice-Linie. Auf uns.",
-    "body": "Öffentliche Demo Days auf Mallorca. Keine Anmeldung, keine Kosten — komm vorbei und schlag die Schläger.",
+    "body": "Öffentliche Demo Days auf Mallorca. Anmeldung direkt im jeweiligen Club, kostenlos — komm vorbei und schlag die Schläger.",
     "empty": "Aktuell keine Demo Days geplant. Schau bald wieder rein oder melde dich für eine private Session.",
     "cta": "Alle Demo Days",
     "rsvp": "Termin merken"
@@ -59,7 +59,9 @@
     "eyebrow": "Vice Equipment",
     "title": "Der komplette Vice-Katalog.",
     "body": "Driver, Hölzer, Eisen, Wedges, Putter, Bälle und Apparel — gefittet und bestellt über mich als deinen lokalen Mallorca-Händler.",
-    "cta": "Zur Produktlinie"
+    "cta": "Zur Produktlinie",
+    "orderNote": "Schreib mir direkt für Verfügbarkeit und Preise — ich kümmere mich um deine Bestellung direkt über Vice.",
+    "orderCta": "Kontakt aufnehmen"
   },
   "contactSection": {
     "eyebrow": "Kontakt",
