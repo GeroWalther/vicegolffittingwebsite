@@ -3,6 +3,7 @@ import { Inter, Poppins, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
           <WhatsAppButton />
           <Toaster theme="light" position="top-center" />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
