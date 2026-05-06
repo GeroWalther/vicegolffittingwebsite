@@ -104,10 +104,10 @@ export async function POST(req: Request) {
       },
     ],
     payment_intent_data: {
-      // Up to 22 chars total (prefix + suffix combined). This is what shows on
-      // the customer's credit-card statement — keeps Vice Fitting bookings
-      // identifiable regardless of the account-level business name.
-      statement_descriptor_suffix: "VICEFITTING",
+      // No per-charge suffix: Stripe falls back to the account-level
+      // statement descriptor (set to "VICE GOLF FITTING" in the Stripe
+      // dashboard) which renders cleanly on bank statements without an
+      // asterisk separator.
       description: `Vice Golf Fitting · ${booking.name} · ${startsAt.toISOString()}`,
     },
     metadata: { bookingId: String(booking._id) },
