@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Vice Fitting Mallorca — Official Vice Golf Fitter at Son Gual";
+export const alt = "Vice Fitting Mallorca — Official Vice Golf Fitter on Mallorca";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -72,7 +72,7 @@ export default async function OgImage() {
               lineHeight: 1.3,
             }}
           >
-            Personal Vice Golf club fittings at Son Gual. €90 / 60 min — credited back when you order clubs.
+            Personal Vice Golf club fittings across Mallorca. €90 / 60 min — credited back when you order clubs.
           </div>
         </div>
 
@@ -89,7 +89,7 @@ export default async function OgImage() {
           }}
         >
           <span>vicegolf-mallorca.com</span>
-          <span>Son Gual · Mallorca · ES</span>
+          <span>Mallorca · ES</span>
         </div>
       </div>
     ),

@@ -11,10 +11,19 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { BUSINESS } from "@/lib/constants";
-import { buildSlotsForDate, isPastSlot, isSunday } from "@/lib/slots";
+import { isPastSlot } from "@/lib/slots";
 import { cn } from "@/lib/utils";
 
-type Availability = { taken: string[] };
+type Availability = { slots: string[]; taken: string[] };
+
+function buildSlotsFromTimes(date: Date, times: string[]) {
+  return times.map((time) => {
+    const [h, m] = time.split(":").map(Number);
+    const d = new Date(date);
+    d.setHours(h, m, 0, 0);
+    return { time, iso: d.toISOString() };
+  });
+}
 
 export function BookingForm() {
   const t = useTranslations("book");
@@ -24,25 +33,50 @@ export function BookingForm() {
   const [pending, startTransition] = useTransition();
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [slot, setSlot] = useState<string | null>(null);
+  const [availableTimes, setAvailableTimes] = useState<string[]>([]);
   const [taken, setTaken] = useState<string[]>([]);
+  const [openDays, setOpenDays] = useState<Set<string>>(new Set());
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [handicap, setHandicap] = useState("");
   const [notes, setNotes] = useState("");
 
+  // Fetch the set of upcoming open days so the calendar can disable everything else.
+  useEffect(() => {
+    const today = new Date();
+    const from = formatDate(today, "yyyy-MM-dd");
+    const toDate = new Date(today);
+    toDate.setDate(toDate.getDate() + 120);
+    const to = formatDate(toDate, "yyyy-MM-dd");
+    fetch(`/api/availability/days?from=${from}&to=${to}`, { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(r)))
+      .then((j: { days: string[] }) => setOpenDays(new Set(j.days ?? [])))
+      .catch(() => setOpenDays(new Set()));
+  }, []);
+
   useEffect(() => {
     if (!date) return;
     const day = formatDate(date, "yyyy-MM-dd");
+    setAvailableTimes([]);
     setTaken([]);
     setSlot(null);
     fetch(`/api/availability?day=${day}`, { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : Promise.reject(r)))
-      .then((j: Availability) => setTaken(j.taken ?? []))
-      .catch(() => setTaken([]));
+      .then((j: Availability) => {
+        setAvailableTimes(j.slots ?? []);
+        setTaken(j.taken ?? []);
+      })
+      .catch(() => {
+        setAvailableTimes([]);
+        setTaken([]);
+      });
   }, [date]);
 
-  const slots = useMemo(() => (date ? buildSlotsForDate(date) : []), [date]);
+  const slots = useMemo(
+    () => (date ? buildSlotsFromTimes(date, availableTimes) : []),
+    [date, availableTimes],
+  );
 
   const slotsView = slots.map((s) => ({
     ...s,
@@ -69,12 +103,17 @@ export function BookingForm() {
         });
         if (!res.ok) {
           const j = await res.json().catch(() => ({}));
-          if (j?.code === "SLOT_TAKEN") {
+          if (j?.code === "SLOT_TAKEN" || j?.code === "SLOT_NOT_AVAILABLE") {
             toast.error(t("errors.slotTaken"));
-            // refresh slots
             const day = formatDate(date, "yyyy-MM-dd");
-            const r2 = await fetch(`/api/availability?day=${day}`, { cache: "no-store" });
-            if (r2.ok) setTaken(((await r2.json()) as Availability).taken ?? []);
+            const r2 = await fetch(`/api/availability?day=${day}`, {
+              cache: "no-store",
+            });
+            if (r2.ok) {
+              const j2 = (await r2.json()) as Availability;
+              setAvailableTimes(j2.slots ?? []);
+              setTaken(j2.taken ?? []);
+            }
             setSlot(null);
             return;
           }
@@ -100,9 +139,10 @@ export function BookingForm() {
               mode="single"
               selected={date}
               onSelect={setDate}
-              disabled={(d) =>
-                d < new Date(new Date().setHours(0, 0, 0, 0)) || isSunday(d)
-              }
+              disabled={(d) => {
+                if (d < new Date(new Date().setHours(0, 0, 0, 0))) return true;
+                return !openDays.has(formatDate(d, "yyyy-MM-dd"));
+              }}
               showOutsideDays
             />
           </div>
@@ -112,7 +152,7 @@ export function BookingForm() {
           <Label className="eyebrow mb-3 block">{t("fields.time")}</Label>
           {!date ? (
             <p className="text-sm text-muted-foreground">{t("selectDate")}</p>
-          ) : slotsView.every((s) => s.disabled) ? (
+          ) : slotsView.length === 0 || slotsView.every((s) => s.disabled) ? (
             <p className="text-sm text-muted-foreground">{t("noSlots")}</p>
           ) : (
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">

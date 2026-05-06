@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "Vice Fitting Mallorca — Official Vice Golf Fitter at Son Gual",
+    "title": "Vice Fitting Mallorca — Official Vice Golf Fitter on Mallorca",
     "titleTemplate": "%s · Vice Fitting Mallorca",
-    "description": "Personal Vice Golf club fittings at Son Gual, Mallorca. Launch monitor, full bag analysis, complete Vice driver/iron/wedge/putter line. €90 / 60 min — credited back when you order clubs.",
-    "ogAlt": "Vice Fitting Mallorca — Official Vice Golf Fitter at Son Gual"
+    "description": "Personal Vice Golf club fittings across Mallorca. Launch monitor, full bag analysis, complete Vice driver/iron/wedge/putter line. €90 / 60 min — credited back when you order clubs.",
+    "ogAlt": "Vice Fitting Mallorca — Official Vice Golf Fitter on Mallorca"
   },
   "nav": {
     "home": "Home",
@@ -18,7 +18,7 @@
   "hero": {
     "eyebrow": "Official Vice Golf Fitter — Mallorca",
     "title": "Dial in your weapons.",
-    "subtitle": "Personal Vice Golf club fittings at Son Gual. One hour. Real data. Better golf.",
+    "subtitle": "Personal Vice Golf club fittings across Mallorca. One hour. Real data. Better golf.",
     "cta": "Book a Fitting",
     "secondary": "View Demo Days"
   },
@@ -39,7 +39,7 @@
     "priceLabel": "Per session",
     "priceUnit": "/ hour",
     "includes": [
-      "Launch monitor session at Son Gual",
+      "Launch monitor session in Mallorca",
       "Full bag analysis or single-club focus",
       "Vice head, shaft & grip matching",
       "Build sheet emailed to you"
@@ -100,7 +100,7 @@
   },
   "book": {
     "title": "Book your fitting",
-    "subtitle": "60 minutes at Son Gual — €90. Pay securely with card, get an instant calendar invite.",
+    "subtitle": "60 minutes in Mallorca — €90. Pay securely with card, get an instant calendar invite.",
     "fields": {
       "name": "Full name",
       "email": "Email",
@@ -113,7 +113,7 @@
       "notesPlaceholder": "What you'd like to focus on, current clubs, etc."
     },
     "summary": "Summary",
-    "session": "Vice fitting · 60 min · Son Gual",
+    "session": "Vice fitting · 60 min · Mallorca",
     "total": "Total",
     "creditNote": "100% credited back if you order clubs after the fitting.",
     "submit": "Continue to payment",
@@ -129,7 +129,7 @@
   },
   "success": {
     "title": "You're booked.",
-    "body": "Your fitting is confirmed. Check your email for the calendar invite and details. See you at Son Gual.",
+    "body": "Your fitting is confirmed. Check your email for the calendar invite and details. See you in Mallorca.",
     "cta": "Back to home"
   },
   "cancel": {

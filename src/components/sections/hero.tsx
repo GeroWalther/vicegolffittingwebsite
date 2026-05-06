@@ -48,7 +48,7 @@ export function Hero() {
                 label="Duration"
                 value={`${BUSINESS.fittingDurationMinutes} min`}
               />
-              <Stat label="Location" value="Son Gual" />
+              <Stat label="Location" value="Mallorca" />
             </div>
           </div>
 

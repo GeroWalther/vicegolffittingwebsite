@@ -62,8 +62,9 @@ export function ContactSection() {
             <p className="eyebrow">Fitting location</p>
             <p className="mt-1 text-xl font-semibold">{BUSINESS.location}</p>
             <p className="mt-2 text-sm text-muted-foreground max-w-md">
-              All private fittings are held at Son Gual. Public demo days move
-              around — see the demo days section above for upcoming dates.
+              Private fittings are held in Mallorca by appointment — exact
+              location confirmed when you book. Public demo days move around;
+              see the demo days section above for upcoming dates.
             </p>
           </div>
         </div>

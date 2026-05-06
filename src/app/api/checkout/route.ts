@@ -2,9 +2,11 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { connectDB } from "@/lib/db";
 import { Booking } from "@/lib/models/booking";
+import { Availability } from "@/lib/models/availability";
 import { getStripe } from "@/lib/stripe";
 import { BUSINESS, SITE_URL } from "@/lib/constants";
 import { slotEnd } from "@/lib/slots";
+import { dayKeyToUtcMidnight, venueDateAndTime } from "@/lib/availability-utils";
 
 const Body = z.object({
   startsAt: z.string().datetime(),
@@ -31,6 +33,19 @@ export async function POST(req: Request) {
   const endsAt = slotEnd(startsAt);
 
   await connectDB();
+
+  const { date: venueDate, time: venueTime } = venueDateAndTime(startsAt);
+  const dayKey = dayKeyToUtcMidnight(venueDate);
+  if (!dayKey) {
+    return NextResponse.json({ error: "invalid time" }, { status: 400 });
+  }
+  const availability = await Availability.findOne({ date: dayKey }).lean();
+  if (!availability || !availability.slots.includes(venueTime)) {
+    return NextResponse.json(
+      { error: "slot not available", code: "SLOT_NOT_AVAILABLE" },
+      { status: 400 },
+    );
+  }
 
   const conflict = await Booking.findOne({
     startsAt,

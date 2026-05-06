@@ -7,7 +7,7 @@ export const BUSINESS = {
     es: "Fitter Oficial de Vice Golf — Mallorca",
   },
   fitter: "Gero Walther",
-  location: "Son Gual Golf, Mallorca",
+  location: "Mallorca",
   whatsappNumber: "+34637920961",
   whatsappDisplay: "+34 637 920 961",
   email: "hello@vicegolf-mallorca.com",
@@ -24,22 +24,27 @@ export const DEFAULT_LOCALE: Locale = "en";
 export const FITTING_TIMEZONE = "Europe/Madrid";
 
 export const DAILY_SLOTS = [
+  "08:00",
   "09:00",
-  "10:30",
+  "10:00",
+  "11:00",
   "12:00",
+  "13:00",
   "14:00",
-  "15:30",
+  "15:00",
+  "16:00",
   "17:00",
+  "18:00",
+  "19:00",
 ] as const;
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:2020";
 
-// Approximate coordinates for Son Gual Golf, Mallorca
-export const VENUE_GEO = { lat: 39.5894, lng: 2.7567 };
+// Approximate coordinates for Palma de Mallorca (city centre).
+export const VENUE_GEO = { lat: 39.5696, lng: 2.6502 };
 export const VENUE_ADDRESS = {
-  streetAddress: "Crta. Vieja Palma–Manacor, Km 11.5",
-  postalCode: "07199",
+  postalCode: "07001",
   addressLocality: "Palma",
   addressRegion: "Mallorca",
   addressCountry: "ES",
@@ -50,8 +55,8 @@ export const SEO_KEYWORDS = [
   "Vice Golf Mallorca",
   "Golf fitting Mallorca",
   "Club fitting Mallorca",
-  "Son Gual fitting",
-  "Vice fitter",
+  "Vice fitter Mallorca",
+  "Vice Golf Palma",
   "Vice Golf retailer Mallorca",
   "Golf Schläger Fitting Mallorca",
   "Fitting de palos Mallorca",

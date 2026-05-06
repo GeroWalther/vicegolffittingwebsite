@@ -1,29 +1,43 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Booking } from "@/lib/models/booking";
+import { Availability } from "@/lib/models/availability";
+import { dayKeyToUtcMidnight, venueDateAndTime } from "@/lib/availability-utils";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const day = searchParams.get("day");
-  if (!day || !/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+  const dayStart = day ? dayKeyToUtcMidnight(day) : null;
+  if (!day || !dayStart) {
     return NextResponse.json({ error: "bad day" }, { status: 400 });
   }
-  const start = new Date(`${day}T00:00:00.000Z`);
-  const end = new Date(`${day}T23:59:59.999Z`);
 
   try {
     await connectDB();
-    const taken = await Booking.find({
+
+    const availabilityDoc = await Availability.findOne({ date: dayStart }).lean();
+
+    // Match every booking whose Madrid-local calendar date equals `day`.
+    // We over-fetch a 48-hour window around the UTC day to cover DST drift,
+    // then filter precisely on the venue-local date string.
+    const windowStart = new Date(dayStart.getTime() - 24 * 60 * 60_000);
+    const windowEnd = new Date(dayStart.getTime() + 48 * 60 * 60_000);
+    const candidates = await Booking.find({
       status: { $in: ["pending", "paid"] },
-      startsAt: { $gte: start, $lte: end },
+      startsAt: { $gte: windowStart, $lt: windowEnd },
     })
       .select("startsAt")
       .lean();
+    const taken = candidates
+      .filter((b) => venueDateAndTime(b.startsAt).date === day)
+      .map((b) => b.startsAt.toISOString());
+
     return NextResponse.json({
-      taken: taken.map((t) => t.startsAt.toISOString()),
+      slots: availabilityDoc?.slots ?? [],
+      taken,
     });
   } catch (e) {
     console.error("[availability]", e);
-    return NextResponse.json({ taken: [] });
+    return NextResponse.json({ slots: [], taken: [] });
   }
 }

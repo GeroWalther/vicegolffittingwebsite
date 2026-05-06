@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter in Son Gual",
+    "title": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter auf Mallorca",
     "titleTemplate": "%s · Vice Fitting Mallorca",
-    "description": "Persönliches Vice Golf Clubfitting in Son Gual, Mallorca. Launchmonitor, komplette Bag-Analyse, kompletter Vice Driver-/Eisen-/Wedge-/Putter-Katalog. 90 € / 60 Min — wird bei Schlägerkauf verrechnet.",
-    "ogAlt": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter in Son Gual"
+    "description": "Persönliches Vice Golf Clubfitting auf Mallorca. Launchmonitor, komplette Bag-Analyse, kompletter Vice Driver-/Eisen-/Wedge-/Putter-Katalog. 90 € / 60 Min — wird bei Schlägerkauf verrechnet.",
+    "ogAlt": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter auf Mallorca"
   },
   "nav": {
     "home": "Start",
@@ -18,7 +18,7 @@
   "hero": {
     "eyebrow": "Offizieller Vice Golf Fitter — Mallorca",
     "title": "Stell deine Waffen scharf.",
-    "subtitle": "Persönliches Vice Golf Clubfitting in Son Gual. Eine Stunde. Echte Daten. Besseres Golf.",
+    "subtitle": "Persönliches Vice Golf Clubfitting auf Mallorca. Eine Stunde. Echte Daten. Besseres Golf.",
     "cta": "Fitting buchen",
     "secondary": "Demo Days ansehen"
   },
@@ -39,7 +39,7 @@
     "priceLabel": "Pro Session",
     "priceUnit": "/ Stunde",
     "includes": [
-      "Launchmonitor-Session in Son Gual",
+      "Launchmonitor-Session auf Mallorca",
       "Komplettes Bag-Fitting oder einzelner Schläger",
       "Vice Köpfe, Schäfte & Griffe abgestimmt",
       "Build-Sheet per E-Mail"
@@ -100,7 +100,7 @@
   },
   "book": {
     "title": "Dein Fitting buchen",
-    "subtitle": "60 Minuten in Son Gual — 90 €. Sichere Kartenzahlung, sofortige Kalendereinladung.",
+    "subtitle": "60 Minuten auf Mallorca — 90 €. Sichere Kartenzahlung, sofortige Kalendereinladung.",
     "fields": {
       "name": "Vollständiger Name",
       "email": "E-Mail",
@@ -113,7 +113,7 @@
       "notesPlaceholder": "Worauf du dich fokussieren möchtest, aktuelle Schläger, etc."
     },
     "summary": "Zusammenfassung",
-    "session": "Vice Fitting · 60 Min · Son Gual",
+    "session": "Vice Fitting · 60 Min · Mallorca",
     "total": "Gesamt",
     "creditNote": "Wird zu 100 % verrechnet, wenn du nach dem Fitting Schläger bestellst.",
     "submit": "Weiter zur Zahlung",
@@ -129,7 +129,7 @@
   },
   "success": {
     "title": "Gebucht.",
-    "body": "Dein Fitting ist bestätigt. Schau in dein Postfach für die Kalendereinladung und Details. Bis bald in Son Gual.",
+    "body": "Dein Fitting ist bestätigt. Schau in dein Postfach für die Kalendereinladung und Details. Bis bald auf Mallorca.",
     "cta": "Zurück zur Startseite"
   },
   "cancel": {

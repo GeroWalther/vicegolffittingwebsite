@@ -19,7 +19,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: string }) {
     logo: `${SITE_URL}/opengraph-image`,
     image: `${SITE_URL}/opengraph-image`,
     description:
-      "Official Vice Golf retailer and fitter on Mallorca. Personal club fittings at Son Gual.",
+      "Official Vice Golf retailer and fitter on Mallorca. Personal club fittings by appointment across the island.",
     telephone: BUSINESS.whatsappNumber,
     email: BUSINESS.email,
     priceRange: "€€",
@@ -71,7 +71,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: string }) {
       "@type": "Offer",
       name: "Vice Golf Private Club Fitting",
       description:
-        "60-minute personal club fitting with launch monitor at Son Gual, Mallorca. Fee credited back against any Vice Golf order.",
+        "60-minute personal club fitting with launch monitor in Mallorca. Fee credited back against any Vice Golf order.",
       price: BUSINESS.fittingPriceEUR,
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
