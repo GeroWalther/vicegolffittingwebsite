@@ -11,8 +11,8 @@ export const BUSINESS = {
   whatsappNumber: "+34637920961",
   whatsappDisplay: "+34 637 920 961",
   email: "hello@vicegolf-mallorca.com",
-  fittingPriceCents: 9000,
-  fittingPriceEUR: 90,
+  fittingPriceCents: 100,
+  fittingPriceEUR: 1,
   fittingDurationMinutes: 60,
   currency: "eur",
 } as const;
