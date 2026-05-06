@@ -27,25 +27,25 @@ export async function sendBookingConfirmation(booking: BookingDoc) {
   const when = dateFmt.format(booking.startsAt);
 
   const html = `
-    <div style="font-family: ui-sans-serif, system-ui; background:#0a0a0a; color:#fafafa; padding:40px 24px; max-width:560px; margin:0 auto;">
-      <p style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9ca3af; margin:0 0 8px;">Vice Fitting Mallorca</p>
-      <h1 style="font-size:32px; margin:0 0 24px; line-height:1.05;">You're booked.</h1>
-      <p style="font-size:16px; line-height:1.6; color:#d4d4d4; margin:0 0 24px;">
+    <div style="font-family: ui-sans-serif, system-ui; background:#ffffff; color:#0a0a0a; padding:40px 24px; max-width:560px; margin:0 auto;">
+      <p style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6b7280; margin:0 0 8px;">Vice Fitting Mallorca</p>
+      <h1 style="font-size:32px; margin:0 0 24px; line-height:1.05; color:#0a0a0a;">You're booked.</h1>
+      <p style="font-size:16px; line-height:1.6; color:#374151; margin:0 0 24px;">
         Hi ${escapeHtml(booking.name)}, your Vice Golf fitting is confirmed.
       </p>
-      <table style="width:100%; border:1px solid #262626; border-radius:4px; padding:20px; margin:0 0 24px;">
-        <tr><td style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9ca3af; padding-bottom:6px;">When</td></tr>
-        <tr><td style="font-size:18px; font-weight:600; padding-bottom:18px;">${escapeHtml(when)} (Mallorca time)</td></tr>
-        <tr><td style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9ca3af; padding-bottom:6px;">Where</td></tr>
-        <tr><td style="font-size:18px; font-weight:600; padding-bottom:18px;">${escapeHtml(BUSINESS.location)}</td></tr>
-        <tr><td style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9ca3af; padding-bottom:6px;">Duration</td></tr>
-        <tr><td style="font-size:18px; font-weight:600;">${BUSINESS.fittingDurationMinutes} minutes</td></tr>
+      <table style="width:100%; border:1px solid #e5e7eb; border-radius:4px; padding:20px; margin:0 0 24px; color:#0a0a0a;">
+        <tr><td style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6b7280; padding-bottom:6px;">When</td></tr>
+        <tr><td style="font-size:18px; font-weight:600; color:#0a0a0a; padding-bottom:18px;">${escapeHtml(when)} (Mallorca time)</td></tr>
+        <tr><td style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6b7280; padding-bottom:6px;">Where</td></tr>
+        <tr><td style="font-size:18px; font-weight:600; color:#0a0a0a; padding-bottom:18px;">${escapeHtml(BUSINESS.location)}</td></tr>
+        <tr><td style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6b7280; padding-bottom:6px;">Duration</td></tr>
+        <tr><td style="font-size:18px; font-weight:600; color:#0a0a0a;">${BUSINESS.fittingDurationMinutes} minutes</td></tr>
       </table>
-      <p style="font-size:14px; line-height:1.6; color:#d4d4d4;">
-        The calendar invite is attached — open it on your phone or Mac and it'll add the session plus reminders. Need to reschedule? Just reply or message me on WhatsApp <a href="https://wa.me/${BUSINESS.whatsappNumber.replace("+", "")}" style="color:#C9FF3D;">${BUSINESS.whatsappDisplay}</a>.
+      <p style="font-size:14px; line-height:1.6; color:#374151;">
+        The calendar invite is attached — open it on your phone or Mac and it'll add the session plus reminders. Need to reschedule? Just reply or message me on WhatsApp <a href="https://wa.me/${BUSINESS.whatsappNumber.replace("+", "")}" style="color:#0a0a0a; font-weight:600;">${BUSINESS.whatsappDisplay}</a>.
       </p>
-      <p style="font-size:14px; line-height:1.6; color:#d4d4d4; margin-top:24px;">See you on the range.</p>
-      <p style="font-size:14px; color:#9ca3af; margin-top:8px;">— ${BUSINESS.fitter}</p>
+      <p style="font-size:14px; line-height:1.6; color:#374151; margin-top:24px;">See you on the range.</p>
+      <p style="font-size:14px; color:#6b7280; margin-top:8px;">— ${BUSINESS.fitter}</p>
     </div>
   `;
 
