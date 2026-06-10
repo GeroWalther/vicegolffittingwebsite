@@ -5,6 +5,48 @@
     "description": "Personal Vice Golf club fittings across Mallorca. Launch monitor, full bag analysis, complete Vice driver/iron/wedge/putter line. €90 / 60 min — credited back when you order clubs.",
     "ogAlt": "Vice Fitting Mallorca — Official Vice Golf Fitter on Mallorca"
   },
+  "fittingPage": {
+    "metaTitle": "Golf Fitting Mallorca — Vice Golf Club Fitting with TrackMan",
+    "metaDescription": "Personal Vice Golf club fitting on Mallorca at Golf Son Gual near Palma. TrackMan data, full bag analysis. 60 min for €90, fully credited against your club order. Book your session.",
+    "eyebrow": "Golf Fitting Mallorca",
+    "title": "Your golf fitting on Mallorca — built around your swing.",
+    "intro": "I'm Gero Walther, the official Vice Golf fitter on Mallorca. In 60 minutes I measure your swing on a TrackMan launch monitor and build your driver, irons, wedges and putter to fit you — head, shaft, lie angle and grip. No guessing, just real data.",
+    "ctaBook": "Book a Fitting",
+    "ctaWhatsapp": "Rather ask first? Message me on WhatsApp →",
+    "includesTitle": "What's inside your fitting",
+    "includesBody": "A fitting is more than a few test shots. We work through your whole set and tune every detail to your tempo and ball flight.",
+    "includes": [
+      "60 minutes one-to-one with a certified Vice fitter",
+      "TrackMan launch monitor with your real ball-flight data",
+      "Full bag analysis or single-club focus",
+      "Drivers, woods, irons, wedges & putters from the Vice matrix",
+      "Head, shaft, lie angle, length & grip dialed in",
+      "Personal build sheet emailed to you"
+    ],
+    "processTitle": "How your fitting works",
+    "process": [
+      { "step": "01", "title": "Talk it through", "body": "We discuss your game, your goals and your current clubs." },
+      { "step": "02", "title": "Measure", "body": "You hit on the TrackMan — we see carry, spin, launch angle and dispersion in real time." },
+      { "step": "03", "title": "Dial in", "body": "We test heads, shafts and lie angles from the Vice matrix until the numbers line up." },
+      { "step": "04", "title": "Build sheet", "body": "You get your exact spec by email — and can order the clubs straight through me." }
+    ],
+    "locationTitle": "Where: Golf Son Gual, near Palma",
+    "locationBody": "Your fitting takes place in my indoor studio at Golf Son Gual, just minutes from Palma de Mallorca. Climate-controlled, weather-proof, with the full range of heads and shafts on site.",
+    "techTitle": "TrackMan launch monitor",
+    "techBody": "I measure with a TrackMan launch monitor — the same system used on the PGA Tour. Every shot gives precise data on ball speed, spin, launch angle and carry, instead of guesswork.",
+    "creditTitle": "Buy clubs after? The fitting is on me.",
+    "creditBody": "The €90 you pay for the fitting is credited in full against any Vice Golf order you place with me afterwards. On a full set, the fitting is effectively free.",
+    "faqTitle": "Golf fitting FAQ",
+    "faq": [
+      { "q": "How much does a golf fitting on Mallorca cost?", "a": "A fitting session lasts 60 minutes and costs €90. I credit that amount in full against any Vice Golf order you place with me afterwards." },
+      { "q": "Where does the fitting take place?", "a": "In my indoor studio at Golf Son Gual, just minutes from Palma de Mallorca — with TrackMan and the full club selection on site." },
+      { "q": "Do I have to buy clubs afterwards?", "a": "No. You can book the fitting with no obligation to buy. If you do order afterwards, the fitting fee is credited back." },
+      { "q": "Should I bring my own clubs?", "a": "You're welcome to, but it's not required. Bringing your current clubs lets us measure them as a benchmark. All test heads and shafts are on site." },
+      { "q": "What handicap is a fitting worth it for?", "a": "Every level — from high handicappers to scratch golfers. Properly fitted clubs help every player hit more consistent shots." },
+      { "q": "What language is the fitting in?", "a": "German, English or Spanish — whatever suits you best." },
+      { "q": "How long does the fitting take?", "a": "About 60 minutes for a single fitting. For a full bag analysis, please allow a little more time — just let me know." }
+    ]
+  },
   "nav": {
     "home": "Home",
     "fitting": "Fitting",
@@ -46,7 +88,8 @@
     ],
     "cta": "Reserve your slot",
     "creditTitle": "Buy clubs after? Fitting is on us.",
-    "creditBody": "The €90 you pay for the fitting is credited back against any Vice Golf order you place with me afterwards — so a full set of clubs becomes effectively free of fitting cost."
+    "creditBody": "The €90 you pay for the fitting is credited back against any Vice Golf order you place with me afterwards — so a full set of clubs becomes effectively free of fitting cost.",
+    "learnMore": "See how the fitting works →"
   },
   "demoSection": {
     "eyebrow": "Demo Days",

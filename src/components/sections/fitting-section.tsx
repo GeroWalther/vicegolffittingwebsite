@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Check, ArrowUpRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { LinkButton } from "@/components/ui/link-button";
 import { BUSINESS } from "@/lib/constants";
 
@@ -18,6 +19,12 @@ export function FittingSection() {
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-lg">
             {t("body")}
           </p>
+          <Link
+            href="/fitting"
+            className="mt-6 inline-flex text-sm font-medium uppercase tracking-wide text-foreground hover:text-volt-foreground transition-colors"
+          >
+            {t("learnMore")}
+          </Link>
         </div>
 
         <div className="relative rounded-md border border-border bg-card p-8 lg:p-10">

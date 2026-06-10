@@ -5,6 +5,48 @@
     "description": "Persönliches Vice Golf Clubfitting auf Mallorca. Launchmonitor, komplette Bag-Analyse, kompletter Vice Driver-/Eisen-/Wedge-/Putter-Katalog. 90 € / 60 Min — wird bei Schlägerkauf verrechnet.",
     "ogAlt": "Vice Fitting Mallorca — Offizieller Vice Golf Fitter auf Mallorca"
   },
+  "fittingPage": {
+    "metaTitle": "Golf Fitting Mallorca — Vice Golf Clubfitting mit TrackMan",
+    "metaDescription": "Persönliches Vice Golf Clubfitting auf Mallorca bei Golf Son Gual nahe Palma. TrackMan-Daten, komplette Bag-Analyse. 60 Min für 90 €, voll auf deinen Schlägerkauf angerechnet. Jetzt Termin buchen.",
+    "eyebrow": "Golf Fitting Mallorca",
+    "title": "Dein Golf Fitting auf Mallorca — exakt auf deinen Schwung gebaut.",
+    "intro": "Ich bin Gero Walther, offizieller Vice Golf Fitter auf Mallorca. In 60 Minuten messe ich deinen Schwung mit dem TrackMan-Launchmonitor und baue Driver, Eisen, Wedges und Putter exakt auf dich — Kopf, Schaft, Lie-Winkel und Griff. Kein Raten, nur echte Daten.",
+    "ctaBook": "Fitting buchen",
+    "ctaWhatsapp": "Lieber kurz fragen? Schreib mir auf WhatsApp →",
+    "includesTitle": "Was in deinem Fitting steckt",
+    "includesBody": "Ein Fitting ist mehr als ein paar Probeschläge. Wir gehen dein ganzes Set durch und stimmen jedes Detail auf dein Tempo und deinen Ballflug ab.",
+    "includes": [
+      "60 Minuten 1:1 mit zertifiziertem Vice Fitter",
+      "TrackMan-Launchmonitor mit deinen echten Ballflugdaten",
+      "Komplette Bag-Analyse oder einzelner Schläger",
+      "Driver, Hölzer, Eisen, Wedges & Putter aus der Vice-Matrix",
+      "Kopf, Schaft, Lie-Winkel, Länge & Griff abgestimmt",
+      "Persönliches Build-Sheet per E-Mail"
+    ],
+    "processTitle": "So läuft dein Fitting ab",
+    "process": [
+      { "step": "01", "title": "Vorgespräch", "body": "Wir sprechen über dein Spiel, deine Ziele und deine aktuellen Schläger." },
+      { "step": "02", "title": "Messen", "body": "Du schlägst auf dem TrackMan — wir sehen Carry, Spin, Startwinkel und Streuung in Echtzeit." },
+      { "step": "03", "title": "Anpassen", "body": "Wir testen Köpfe, Schäfte und Lie-Winkel aus der Vice-Matrix, bis die Zahlen stimmen." },
+      { "step": "04", "title": "Build-Sheet", "body": "Du bekommst deine exakte Spezifikation per E-Mail — und kannst die Schläger direkt über mich bestellen." }
+    ],
+    "locationTitle": "Wo: Golf Son Gual, nahe Palma",
+    "locationBody": "Dein Fitting findet in meinem Indoor-Studio bei Golf Son Gual statt, nur wenige Minuten von Palma de Mallorca. Klimatisiert, wetterunabhängig und mit voller Schläger- und Schaft-Auswahl vor Ort.",
+    "techTitle": "TrackMan-Launchmonitor",
+    "techBody": "Ich messe mit dem TrackMan-Launchmonitor — demselben System, das auf der PGA Tour eingesetzt wird. Jeder Schlag liefert präzise Daten zu Ballgeschwindigkeit, Spin, Startwinkel und Carry, statt Bauchgefühl.",
+    "creditTitle": "Schläger kaufen? Das Fitting geht aufs Haus.",
+    "creditBody": "Die 90 €, die du fürs Fitting zahlst, rechne ich 1:1 auf jede Vice Golf Bestellung an, die du danach bei mir aufgibst. Bei einem kompletten Satz ist das Fitting also praktisch kostenlos.",
+    "faqTitle": "Häufige Fragen zum Golf Fitting",
+    "faq": [
+      { "q": "Was kostet ein Golf Fitting auf Mallorca?", "a": "Eine Fitting-Session dauert 60 Minuten und kostet 90 €. Diesen Betrag rechne ich vollständig auf jede Vice Golf Bestellung an, die du danach bei mir aufgibst." },
+      { "q": "Wo findet das Fitting statt?", "a": "In meinem Indoor-Studio bei Golf Son Gual, nur wenige Minuten von Palma de Mallorca entfernt — mit TrackMan und kompletter Schläger-Auswahl vor Ort." },
+      { "q": "Muss ich danach Schläger kaufen?", "a": "Nein. Du kannst das Fitting auch ohne Kaufverpflichtung buchen. Falls du danach bestellst, wird die Fitting-Gebühr angerechnet." },
+      { "q": "Soll ich eigene Schläger mitbringen?", "a": "Gern, aber nicht nötig. Wenn du deine aktuellen Schläger mitbringst, können wir sie als Vergleich vermessen. Alle Test-Köpfe und -Schäfte sind vor Ort." },
+      { "q": "Für welche Spielstärke ist ein Fitting sinnvoll?", "a": "Für alle — vom hohen Handicap bis zum Scratch-Golfer. Richtig angepasste Schläger helfen jedem Spieler zu konstanteren Schlägen." },
+      { "q": "In welcher Sprache läuft das Fitting?", "a": "Auf Deutsch, Englisch oder Spanisch — ganz wie du möchtest." },
+      { "q": "Wie lange dauert das Fitting?", "a": "Etwa 60 Minuten für ein einzelnes Fitting. Für eine komplette Bag-Analyse plane bitte etwas mehr Zeit ein — sprich mich einfach an." }
+    ]
+  },
   "nav": {
     "home": "Start",
     "fitting": "Fitting",
@@ -46,7 +88,8 @@
     ],
     "cta": "Slot reservieren",
     "creditTitle": "Schläger kaufen? Fitting geht aufs Haus.",
-    "creditBody": "Die 90 €, die du fürs Fitting zahlst, werden 1:1 auf jede Vice Golf Bestellung angerechnet, die du danach bei mir aufgibst — ein kompletter Schlägersatz ist damit quasi ohne Fitting-Kosten."
+    "creditBody": "Die 90 €, die du fürs Fitting zahlst, werden 1:1 auf jede Vice Golf Bestellung angerechnet, die du danach bei mir aufgibst — ein kompletter Schlägersatz ist damit quasi ohne Fitting-Kosten.",
+    "learnMore": "So läuft dein Fitting ab →"
   },
   "demoSection": {
     "eyebrow": "Demo Days",

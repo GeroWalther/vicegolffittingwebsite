@@ -5,6 +5,48 @@
     "description": "Fitting personal de palos Vice Golf en Mallorca. Launch monitor, análisis completo del bag, gama completa de drivers/hierros/wedges/putters Vice. 90 € / 60 min — se descuenta al comprar palos.",
     "ogAlt": "Vice Fitting Mallorca — Fitter Oficial de Vice Golf en Mallorca"
   },
+  "fittingPage": {
+    "metaTitle": "Fitting de Golf Mallorca — Vice Golf con TrackMan",
+    "metaDescription": "Fitting personal de palos Vice Golf en Mallorca, en Golf Son Gual cerca de Palma. Datos TrackMan, análisis completo del bag. 60 min por 90 €, descontados de tu pedido de palos. Reserva tu sesión.",
+    "eyebrow": "Fitting de Golf Mallorca",
+    "title": "Tu fitting de golf en Mallorca — hecho para tu swing.",
+    "intro": "Soy Gero Walther, fitter oficial de Vice Golf en Mallorca. En 60 minutos mido tu swing con un launch monitor TrackMan y ajusto driver, hierros, wedges y putter a tu medida — cabeza, shaft, lie y grip. Sin adivinar, solo datos reales.",
+    "ctaBook": "Reservar fitting",
+    "ctaWhatsapp": "¿Prefieres preguntar antes? Escríbeme por WhatsApp →",
+    "includesTitle": "Qué incluye tu fitting",
+    "includesBody": "Un fitting es mucho más que unos golpes de prueba. Repasamos todo tu set y ajustamos cada detalle a tu ritmo y tu vuelo de bola.",
+    "includes": [
+      "60 minutos uno a uno con un fitter Vice certificado",
+      "Launch monitor TrackMan con tus datos reales de vuelo",
+      "Análisis completo del bag o palo individual",
+      "Drivers, maderas, hierros, wedges y putters de la matriz Vice",
+      "Cabeza, shaft, lie, longitud y grip ajustados",
+      "Build sheet personal enviado por email"
+    ],
+    "processTitle": "Cómo es tu fitting",
+    "process": [
+      { "step": "01", "title": "Hablamos", "body": "Comentamos tu juego, tus objetivos y tus palos actuales." },
+      { "step": "02", "title": "Medimos", "body": "Golpeas en el TrackMan — vemos carry, spin, ángulo de salida y dispersión en tiempo real." },
+      { "step": "03", "title": "Ajustamos", "body": "Probamos cabezas, shafts y lies de la matriz Vice hasta que los números cuadran." },
+      { "step": "04", "title": "Build sheet", "body": "Recibes tu especificación exacta por email — y puedes pedir los palos directamente a través mío." }
+    ],
+    "locationTitle": "Dónde: Golf Son Gual, cerca de Palma",
+    "locationBody": "Tu fitting se realiza en mi estudio indoor en Golf Son Gual, a pocos minutos de Palma de Mallorca. Climatizado, sin depender del tiempo y con toda la gama de cabezas y shafts in situ.",
+    "techTitle": "Launch monitor TrackMan",
+    "techBody": "Mido con un launch monitor TrackMan — el mismo sistema que se usa en el PGA Tour. Cada golpe da datos precisos de velocidad de bola, spin, ángulo de salida y carry, en lugar de suposiciones.",
+    "creditTitle": "¿Compras palos después? El fitting corre de mi cuenta.",
+    "creditBody": "Los 90 € que pagas por el fitting se descuentan íntegramente de cualquier pedido Vice Golf que hagas conmigo después. En un set completo, el fitting sale prácticamente gratis.",
+    "faqTitle": "Preguntas frecuentes sobre el fitting",
+    "faq": [
+      { "q": "¿Cuánto cuesta un fitting de golf en Mallorca?", "a": "Una sesión de fitting dura 60 minutos y cuesta 90 €. Ese importe se descuenta íntegramente de cualquier pedido Vice Golf que hagas conmigo después." },
+      { "q": "¿Dónde se realiza el fitting?", "a": "En mi estudio indoor en Golf Son Gual, a pocos minutos de Palma de Mallorca — con TrackMan y toda la selección de palos in situ." },
+      { "q": "¿Tengo que comprar palos después?", "a": "No. Puedes reservar el fitting sin compromiso de compra. Si pides después, la tarifa del fitting se descuenta." },
+      { "q": "¿Debo llevar mis propios palos?", "a": "Puedes hacerlo, pero no es necesario. Llevar tus palos actuales nos permite medirlos como referencia. Todas las cabezas y shafts de prueba están in situ." },
+      { "q": "¿Para qué hándicap merece la pena un fitting?", "a": "Para todos — desde hándicaps altos hasta jugadores scratch. Unos palos bien ajustados ayudan a cualquier jugador a golpear con más constancia." },
+      { "q": "¿En qué idioma es el fitting?", "a": "En alemán, inglés o español — lo que prefieras." },
+      { "q": "¿Cuánto dura el fitting?", "a": "Unos 60 minutos para un fitting individual. Para un análisis completo del bag, reserva algo más de tiempo — solo dímelo." }
+    ]
+  },
   "nav": {
     "home": "Inicio",
     "fitting": "Fitting",
@@ -46,7 +88,8 @@
     ],
     "cta": "Reservar slot",
     "creditTitle": "¿Comprar palos después? El fitting va por nuestra cuenta.",
-    "creditBody": "Los 90 € que pagas por el fitting se descuentan íntegramente de cualquier pedido Vice Golf que hagas conmigo después — un set completo de palos sale prácticamente sin coste de fitting."
+    "creditBody": "Los 90 € que pagas por el fitting se descuentan íntegramente de cualquier pedido Vice Golf que hagas conmigo después — un set completo de palos sale prácticamente sin coste de fitting.",
+    "learnMore": "Cómo es tu fitting →"
   },
   "demoSection": {
     "eyebrow": "Demo Days",

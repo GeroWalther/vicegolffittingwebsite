@@ -8,9 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const locale of routing.locales) {
     const homeLangs: Record<string, string> = {};
+    const fittingLangs: Record<string, string> = {};
     const bookLangs: Record<string, string> = {};
     for (const l of routing.locales) {
       homeLangs[l] = `${SITE_URL}/${l}`;
+      fittingLangs[l] = `${SITE_URL}/${l}/fitting`;
       bookLangs[l] = `${SITE_URL}/${l}/book`;
     }
 
@@ -20,6 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: locale === routing.defaultLocale ? 1 : 0.9,
       alternates: { languages: homeLangs },
+    });
+
+    entries.push({
+      url: `${SITE_URL}/${locale}/fitting`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: fittingLangs },
     });
 
     entries.push({
