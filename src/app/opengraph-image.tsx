@@ -72,7 +72,7 @@ export default async function OgImage() {
               lineHeight: 1.3,
             }}
           >
-            Personal Vice Golf club fittings across Mallorca. €90 / 60 min — credited back when you order clubs.
+            Personal Vice Golf club fittings across Mallorca. €90 / 60 min — no obligation to buy.
           </div>
         </div>
 

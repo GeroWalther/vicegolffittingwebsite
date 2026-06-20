@@ -71,7 +71,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: string }) {
       "@type": "Offer",
       name: "Vice Golf Private Club Fitting",
       description:
-        "60-minute personal club fitting with launch monitor in Mallorca. Fee credited back against any Vice Golf order.",
+        "60-minute personal club fitting with TrackMan 4 launch monitor in Mallorca. No obligation to buy clubs afterwards.",
       price: BUSINESS.fittingPriceEUR,
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
