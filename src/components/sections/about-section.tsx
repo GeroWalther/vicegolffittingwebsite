@@ -21,7 +21,7 @@ export function AboutSection() {
             <div>
               <p className="font-semibold">{BUSINESS.fitter}</p>
               <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                Certified Vice Fitter · Mallorca
+                Vice Fitter · Mallorca
               </p>
             </div>
           </div>

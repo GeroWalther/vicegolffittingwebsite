@@ -1,22 +1,22 @@
 {
   "seo": {
-    "title": "Vice Fitting Mallorca — Official Vice Golf Fitter on Mallorca",
+    "title": "Vice Fitting Mallorca — Vice Golf Club Fitting on Mallorca",
     "titleTemplate": "%s · Vice Fitting Mallorca",
     "description": "Personal Vice Golf club fittings across Mallorca. Launch monitor, full bag analysis, complete Vice driver/iron/wedge/putter line. €90 / 60 min — credited back when you order clubs.",
-    "ogAlt": "Vice Fitting Mallorca — Official Vice Golf Fitter on Mallorca"
+    "ogAlt": "Vice Fitting Mallorca — Vice Golf Club Fitting on Mallorca"
   },
   "fittingPage": {
     "metaTitle": "Golf Fitting Mallorca — Vice Golf Club Fitting with TrackMan",
     "metaDescription": "Personal Vice Golf club fitting on Mallorca at Golf Son Gual near Palma. TrackMan data, full bag analysis. 60 min for €90, fully credited against your club order. Book your session.",
     "eyebrow": "Golf Fitting Mallorca",
     "title": "Your golf fitting on Mallorca — built around your swing.",
-    "intro": "I'm Gero Walther, the official Vice Golf fitter on Mallorca. In 60 minutes I measure your swing on a TrackMan launch monitor and build your driver, irons, wedges and putter to fit you — head, shaft, lie angle and grip. No guessing, just real data.",
+    "intro": "I'm Gero Walther, a Vice Golf fitter on Mallorca. In 60 minutes I measure your swing on a TrackMan launch monitor and build your driver, irons, wedges and putter to fit you — head, shaft, lie angle and grip. No guessing, just real data.",
     "ctaBook": "Book a Fitting",
     "ctaWhatsapp": "Rather ask first? Message me on WhatsApp →",
     "includesTitle": "What's inside your fitting",
     "includesBody": "A fitting is more than a few test shots. We work through your whole set and tune every detail to your tempo and ball flight.",
     "includes": [
-      "60 minutes one-to-one with a certified Vice fitter",
+      "60 minutes one-to-one with your Vice fitter",
       "TrackMan launch monitor with your real ball-flight data",
       "Full bag analysis or single-club focus",
       "Drivers, woods, irons, wedges & putters from the Vice matrix",
@@ -58,7 +58,7 @@
     "menu": "Menu"
   },
   "hero": {
-    "eyebrow": "Official Vice Golf Fitter — Mallorca",
+    "eyebrow": "Vice Golf Fitter — Mallorca",
     "title": "Dial in your weapons.",
     "subtitle": "Personal Vice Golf club fittings across Mallorca. One hour. Real data. Better golf.",
     "cta": "Book a Fitting",
@@ -102,12 +102,12 @@
   "aboutSection": {
     "eyebrow": "About Gero",
     "title": "Fittings that respect your game.",
-    "body": "I'm Gero — golfer, fitter, and the only certified Vice fitter on Mallorca. I built this service for players who are tired of guessing and ready to hit the right club, every time."
+    "body": "I'm Gero — golfer and fitter on Mallorca, specialized in Vice clubs. I built this service for players who are tired of guessing and ready to hit the right club, every time."
   },
   "productsSection": {
     "eyebrow": "Vice Equipment",
     "title": "The full Vice catalog.",
-    "body": "Drivers, woods, irons, wedges, putters, balls, and apparel — fit and ordered through me as your local Mallorca dealer.",
+    "body": "Drivers, woods, irons, wedges, putters, balls, and apparel — fitted on Mallorca and ordered through me.",
     "cta": "Browse the line",
     "orderNote": "Message me directly for stock and pricing — I'll arrange your kit through Vice direct.",
     "orderCta": "Get in touch"
@@ -181,7 +181,7 @@
     "cta": "Try again"
   },
   "footer": {
-    "tagline": "Official Vice Golf retailer & fitter on Mallorca.",
+    "tagline": "Vice Golf fitting & ordering on Mallorca.",
     "rights": "All rights reserved.",
     "imprint": "Imprint",
     "privacy": "Privacy"

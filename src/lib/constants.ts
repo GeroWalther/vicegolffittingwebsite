@@ -2,9 +2,9 @@ export const BUSINESS = {
   name: "Vice Fitting Mallorca",
   shortName: "Vice Fitting",
   tagline: {
-    en: "Official Vice Golf Fitter — Mallorca",
-    de: "Offizieller Vice Golf Fitter — Mallorca",
-    es: "Fitter Oficial de Vice Golf — Mallorca",
+    en: "Vice Golf Fitter — Mallorca",
+    de: "Vice Golf Fitter — Mallorca",
+    es: "Fitter de Vice Golf — Mallorca",
   },
   fitter: "Gero Walther",
   location: "Mallorca",
@@ -57,7 +57,7 @@ export const SEO_KEYWORDS = [
   "Club fitting Mallorca",
   "Vice fitter Mallorca",
   "Vice Golf Palma",
-  "Vice Golf retailer Mallorca",
+  "Vice Golf fitting Mallorca",
   "Golf Schläger Fitting Mallorca",
   "Fitting de palos Mallorca",
 ];

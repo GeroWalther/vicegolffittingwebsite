@@ -11,7 +11,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: string }) {
   // GolfClub is a recognised schema.org type; pairs well with SportsActivityLocation.
   const data = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "SportsActivityLocation", "Store"],
+    "@type": ["LocalBusiness", "SportsActivityLocation"],
     "@id": `${SITE_URL}#business`,
     name: BUSINESS.name,
     alternateName: BUSINESS.shortName,
@@ -19,7 +19,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: string }) {
     logo: `${SITE_URL}/opengraph-image`,
     image: `${SITE_URL}/opengraph-image`,
     description:
-      "Official Vice Golf retailer and fitter on Mallorca. Personal club fittings by appointment across the island.",
+      "Vice Golf club fitting on Mallorca. Personal fittings by appointment, with Vice clubs ordered through the fitter.",
     telephone: BUSINESS.whatsappNumber,
     email: BUSINESS.email,
     priceRange: "€€",
